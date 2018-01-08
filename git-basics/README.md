@@ -1,23 +1,22 @@
 ## Understanding Git Basics
 
 1.  What is git, really?
-    1.  Git is simply a software application install on our computer
-    2.  Specifically, it is a version control software application
+    1.  Git is simply a software application we install on our computer
+    2.  Specifically, it is version control software
     3.  We control this application with a few select commands
 2.  Life before git
     1.  Visual Walkthrough
         1.  Single Developer Example
         2.  Team Project Example
-    2.  A new mental model for git
-        1.  Think of git as your code assistant
-        2.  This assistant is great at managing file related task like:
-            1.  Tracking file changes
-            2.  Keep a history of changes
-            3.  Rolling Back changes
-
-1.  Merging different version
-
-1.  The assistant requires a journal to do its job
+2.  A new mental model for git
+    1.  Think of git as your code assistant
+    2.  This assistant is great at managing file related task like:
+        1.  Tracking file changes
+        2.  Keep a history of changes
+        3.  Rolling Back changes
+        4.  Merging different version
+    3.  The assistant requires a journal to do its job
+        1. We create this journal with `git init`
 
 1.  Common git commands
     1.  Visual Walkthrough
