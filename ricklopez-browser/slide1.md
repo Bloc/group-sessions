@@ -1,0 +1,2 @@
+<h1>A new mental model</h1>
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/76b08aa9-fc2e-4bec-a96c-4334a84a699f" id="Rat4iHW~D5VO"></iframe></div>
