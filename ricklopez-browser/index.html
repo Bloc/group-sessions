@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+s
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/simple-grid.css">
+
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+						# Understanding the Browser
+						#### How the Browser processes HTML, CSS, and JS
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea class="col-6" data-template>
+						## A New Metal Model
+						The Browser is a piece of software made up of several components responsible for specific pieces of work
+						![alt text](//www.lucidchart.com/publicSegments/view/c9f7b5a6-6bb4-4f1c-a3d8-3d29049534bb/image.jpeg "Logo Title Text 1")
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea class="col-6" data-template>
+						## HTML, CSS & The DOM
+						[Visual Walkthrough](https://www.lucidchart.com/documents/view/76b08aa9-fc2e-4bec-a96c-4334a84a699f)
+						![alt text](https://www.lucidchart.com/publicSegments/view/a1bfe17c-abc2-459c-8585-2e6c8d4bed1d/image.jpeg "Logo Title Text 1")
+
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea class="col-6" data-template>
+						## HTTP Engine
+						![alt text](//www.lucidchart.com/publicSegments/view/5e811312-edfd-41e3-8482-5d2174e81173/image.jpeg "Logo Title Text 1")
+
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea class="col-6" data-template>
+						## How a webpage renders
+						[Visual Walkthrough](https://www.lucidchart.com/documents/view/76b08aa9-fc2e-4bec-a96c-4334a84a699f)
+						![alt text](//www.lucidchart.com/publicSegments/view/02ec1846-1458-404f-a122-014622e6ecc0/image.jpeg "Logo Title Text 1")
+
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea class="col-6" data-template>
+						## The JavaScript and Event Engines
+						[Visual Walkthrough](https://www.lucidchart.com/documents/view/76b08aa9-fc2e-4bec-a96c-4334a84a699f)
+						![alt text](//www.lucidchart.com/publicSegments/view/2cee71f7-4437-490a-9d55-439cd947fee0/image.jpeg "Logo Title Text 1")
+
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea class="col-6" data-template>
+						## Code Demo
+						![alt text](https://www.lucidchart.com/publicSegments/view/a922804a-506b-489e-8305-6ff21998a696/image.jpeg "Logo Title Text 1")
+
+					</textarea>
+				</section>
+				<section>
+					<h1>A complete model</h1>
+					<img src="https://mdn.mozillademos.org/files/4617/default.svg"/>
+					<h4>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop" target="_blank">Where to learn more
+						</a>
+					</h4>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop"></a></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
