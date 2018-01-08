@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+<div class="reveal">
+	<div class="slides">
+		<section>
+			<h1>Understanding Git Basics
+			</h1>
+		</section>
+		<section>
+			<h1>What Is Git, Really?
+			</h1>
+			<ol>
+				<li>Git is simply a software application we install on a computer</li>
+				<li>Specifically, it is a <strong style="color:#42AFFA;">version control</strong> software</li>
+				<li>We use this application with a few select commands</li>
+			</ol>
+		</section>
+		<section>
+			<h1>Life Before Git
+			</h1>
+			<div style="width: 80%; height: auto; margin: 0 auto; position: relative;">
+				<iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="//www.lucidchart.com/documents/embeddedchart/cb3eba9f-52cc-4bf9-aefd-9d49b297552d" id="2st4ThCsm6ZM"></iframe></div>
+		</section>
+		<section>
+			<h2>A New Mental Model For Git</h2>
+			<p>
+			<ol>
+				<li>Think of git as your code assistant</li>
+				<li>This assistant is great at managing file related tasks:
+					<ol>
+						<li>Tracking file changes</li>
+						<li>Keep a history of changes</li>
+						<li>Rolling back changes</li>
+						<li>Merging different versions</li>
+					</ol>
+				</li>
+				<li>The assistant requires a journal to do its job</li>
+			</ol>
+			</p>
+		</section>
+		<section>
+			<h2>Common git commands</h2>
+			<div style="width: 80%; height: auto; margin: 0 auto; position: relative;">
+				<iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="//www.lucidchart.com/documents/embeddedchart/5b43cb1c-2bdf-464c-8f11-5bd77e52d461" id="P1m5yj6TWwoK"></iframe>
+			</div>
+		</section>
+		<section>
+			<h2>Branches & Pull Request</h2>
+			<div style="width: 80%; height: auto; margin: 0 auto; position: relative;">
+				<iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="//www.lucidchart.com/documents/embeddedchart/3aad4279-4645-4bcf-a4de-bf3db0caecea" id="zan5IBS_my_N"></iframe>
+			</div>
+		</section>
+		<section>
+			<h2>Git and GitHub</h2>
+			<div style="width: 80%; height: auto; margin: 0 auto; position: relative;">
+				<iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="//www.lucidchart.com/documents/embeddedchart/c72a35e6-7ddc-4f39-b6f1-7cf7a6bb2d39" id="Wgn5iQiglia5"></iframe>
+			</div>
+		</section>
+		<section>
+			<h1>
+				Putting It All Together
+			</h1>
+			<h4>Live Code Demo</h4>
+		</section>
+
+	</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
