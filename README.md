@@ -1,7 +1,7 @@
 # group-sessions
 Group Session Content
 
-[Schedule](calendly.com/bloc-group-sessions)
+[Schedule](http://www.calendly.com/bloc-group-sessions)
 
 ## Session Content
 
