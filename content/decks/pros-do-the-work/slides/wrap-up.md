@@ -2,6 +2,6 @@
 
 - Professionals ship.
 - Do everything you can to ship.
-- Never without your process.
-- Hacks. 
+- Never work without your process.
+- Hacks.
 - Thoughts, celebration, gratitude, persistence, reaction, meaning...
