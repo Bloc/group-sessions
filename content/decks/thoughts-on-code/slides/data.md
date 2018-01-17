@@ -1,7 +1,7 @@
 ## Get The Data
 
-- "If you don't have data, all you have is an opinion." W Edwards Deming
+- _"If you do not have data, all you have is an opinion." W Edwards Deming_
 - Do not assume things are working correctly. Prove it.
 - Functional via tests.
 - Performance via tests.
-- Join group session to find out how.
+- Join group sessions to find out how.
