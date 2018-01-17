@@ -1,8 +1,8 @@
 ## Complete
 
-- "Trust but verify." Ronald Reagan
+- _"Trust but verify." Ronald Reagan_
 - Parameter validation. This is why systems get hacked!
-- Error handling. Try catch blocks.
-- Analytics. Data.
+- Error handling.
+- Analytics and Data.
 - Silent failures.
 - Start thinking about this now.
