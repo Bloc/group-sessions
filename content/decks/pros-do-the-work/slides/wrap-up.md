@@ -5,3 +5,4 @@
 - Never work without your process.
 - Hacks.
 - Thoughts, celebration, gratitude, persistence, reaction, meaning...
+- Take the survey please. It really helps me improve.

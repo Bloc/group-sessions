@@ -1,2 +1,2 @@
 # How Professionals Do The Work
-## Professionals Behave Uniquely
+### professionals behave uniquely
