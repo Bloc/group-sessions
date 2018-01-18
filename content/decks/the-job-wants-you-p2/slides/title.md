@@ -1,3 +1,2 @@
 # The Job Wants You
-## An honest and empowering perspective
-## part two
+### an honest and empowering perspective - part two

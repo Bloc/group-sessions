@@ -5,3 +5,5 @@ Part Two topics include:
 - Resume
 - Applying online
 - Recruiters
+
+- Take the survey please. It really helps me improve.

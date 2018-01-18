@@ -1,2 +1,2 @@
 # Thoughts On Code
-## What Makes It Great?
+### what makes it great

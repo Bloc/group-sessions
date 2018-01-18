@@ -4,3 +4,4 @@
 - Process removes rework.
 - Rework delays shipping.
 - Drive rework away.
+- Your process is CSE 

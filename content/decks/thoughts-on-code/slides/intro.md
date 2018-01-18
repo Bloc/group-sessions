@@ -1,4 +1,4 @@
-## Who is this for?
+## You are in the right session if...
   - You will or have written code. <!-- .element: class="fragment" data-fragment-index="1" -->
   - You have seen code and not understood it. <!-- .element: class="fragment" data-fragment-index="2" -->
   - You are interested in leveling up your coding skills. <!-- .element: class="fragment" data-fragment-index="3" -->
