@@ -1,6 +1,5 @@
 ## The Alternatives
 
-- Start your own
+- Start your own meetup
 - Podcast
 - Vlog
-- Staying invisible is not an alternative
