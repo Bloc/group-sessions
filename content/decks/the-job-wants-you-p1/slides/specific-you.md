@@ -3,5 +3,5 @@
 - How could it want you ?
 - Only if you are visible
 - Be the person they know
-- Be the person the person they know knows
+- Be the person, the person they know, knows
 - Apply online

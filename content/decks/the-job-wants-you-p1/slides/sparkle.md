@@ -4,4 +4,3 @@ Part Two topics include:
 - Your online persona
 - Resume
 - Applying online
-- Recruiters
