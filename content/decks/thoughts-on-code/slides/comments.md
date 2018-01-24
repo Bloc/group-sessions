@@ -5,6 +5,8 @@
 - Clear code requires less, approaching none.
 - Preference allowed. Of course.
 
+```
 // func accepts an array of numbers
 // and finds the element (zn, au, fe, ...)
-// that has the best fit for electron count,
+// that has the best fit for electron count
+```
