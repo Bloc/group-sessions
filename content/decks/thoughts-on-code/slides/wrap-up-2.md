@@ -3,4 +3,4 @@
 - Stay open to new ideas. It is changing fast around here.
 - Get faster. As you ship more you should get faster. Olympic swimmers...
 - Join the other groups session. Ingest ideas and data and then ship.
-- Take the survey please. It really helps me improve.
+- Take the survey. It really helps me improve.
