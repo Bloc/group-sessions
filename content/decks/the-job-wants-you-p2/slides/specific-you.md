@@ -1,7 +1,6 @@
-## The Job Wants You - You Specifically
+## Your Time Split
 
-- How could it want you ?
-- Only if you are visible
-- Be the person they know
-- Be the person the person they know knows
-- Apply online
+- Prioritize
+- Raise your standards
+- Play the odds
+- Play the long shot 
