@@ -1,4 +1,4 @@
-## The Job Wants You - Wrap up
+## The Job Wants You has been shipped
 
 - Get Visible & Sparkle
 - Survey - link in chat
