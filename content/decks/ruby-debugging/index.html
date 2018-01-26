@@ -32,7 +32,7 @@
         <!-- slide 2-->
         <section>
           <h1>Links</h1>
-          <p><a href="bit.ly/blocJSDebug/">bit.ly/blocJSDebug/<a></p>
+          <p><a href="bit.ly/blocRubyDebug/">bit.ly/blocRubyDebug/<a></p>
           <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback Survey</a></p>
         </section>
         <!-- slide 3-->
@@ -77,8 +77,9 @@
           <h1>Debugging Tools</h1>
           <p>
             <ul>
-              <li>print</li>
-              <li>pry</li>
+              <li>printing</li>
+              <li>setting breakpoints</li>
+              <li>testing</li>
             <ul>
           </p>
         </section>
@@ -89,53 +90,75 @@
             <li>Read the message, note the line number</li>
             <li>Opportunity for Googling</li>
           </ul>
-          <img src="./lib/img/errormsg.png"/>
+          <pre><code data-trim data-noescape>
+example.rb:8:in `block in powersOfTwo':
+undefined local variable or method `newArr'
+for main:Object (NameError)
+          </code></pre>
         </section>
         <!-- slide 11-->
-        <section>
-          <h1>Stacktrace</h1>
-          <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/trace">breadcrumbs to follow</a>
-          <a
-            href="https://gist.github.com/bdougie/5d65d313bc365e1fbbe123f29533b90b"><img
-            src="./lib/img/trace.png"/></a>
-        </section>
-        <!-- slide 12-->
-        <!--
-          1. first tour through the chrome console
-          2. then set debugger
-          3. then show console.log
-          4. Show linter example
-        -->
 				<section>
           <h1>Let's squash bugs</h1>
-          <p>Click the error and open your console (CMD + OPT + J or CTRL +
-          SHIFT + J)</p>
-          <ul>
-            <li><a href="https://gist.github.com/bdougie/6eddcb4902a92c9831e92b49c39a79f9">Error</a></li>
-            <li><a href="https://gist.github.com/bdougie/68efde80977a82c0f08592d9ef1cb1f2">Linter (Bonus)</a></li>
-          </ul>
+          <p><a
+            href="https://gist.github.com/bdougie/ae926e797416c434c1396a474e2d3d5a">Link
+          to gist</a></p>
+          <pre><code data-trim data-noescape>
+            def powersOfTwo(n)
+              newArr = []
+              (0..n).to_a.each_with_index do |x, i|
+                newArr.push(2*i)
+              end
+
+              newArr
+            end
+
+            # powersOfTwo(2)
+            # [1,2,4]
+          </code></pre>
         </section>
-        <!-- slide 13-->
-				<section>
-          <h1><a href="https://broken-animation.netlify.com/">Invisible
-              web errors</a></h1>
-          <a href="https://broken-animation.netlify.com/"><img
-             src="./lib/img/broken-jamz.png" /></a>
+        <section>
+          <h1>
+            <a href="https://stackoverflow.com/questions/3955688/how-do-i-debug-ruby-scripts">pry</a>
+          </h1>
+          <p>Install via:</p>
+          <pre><code data-trim data-noescape>
+            $ gem install pry
+            $ pry
+          </code></pre>
+          <p>Then add:</p>
+          <pre><code data-trim data-noescape>
+            require 'pry'
+          </code></pre>
+          <p>into your program.</p>
         </section>
         <!-- slide 14-->
 				<section>
           <h1>The End</h1>
           <ul>
-            <li><a href="bit.ly/blocJSDebug/">bit.ly/blocJSDebug/<a></li>
+            <li><a href="bit.ly/blocRubyDebug/">bit.ly/blocRubyDebug/<a></li>
             <li><a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback
               Survey</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>
+            <a
+              href="">Testing
+            in Ruby</a>
+          </h1>
+          <pre><code data-trim data-noescape>
+            # text example TBD
+          </code></pre>
+        </section>
+        <!-- slide 14-->
+				<section>
+          <h1>The End</h1>
+          <ul>
+            <li><a href="bit.ly/blocRubyDebug/">bit.ly/blocRubyDebug/<a></li>
             <li><a
-                href="https://medium.freecodecamp.org/how-to-set-up-eslint-in-atom-to-contribute-to-freecodecamp-3467dee86e2c">How
-                to add eslint to Atom<a></li>
-            <li><a
-                href="https://tutorialzine.com/2015/03/15-must-know-chrome-devtools-tips-tricks">Chrome
-                dev tips<a></li>
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback
+              Survey</a></li>
           </ul>
         </section>
 			</div>
