@@ -77,11 +77,39 @@
           <h1>Debugging Tools</h1>
           <p>
             <ul>
+              <li>irb</li>
               <li>printing something to the terminal</li>
               <li>setting breakpoints</li>
-              <li>irb</li>
+              <li>Linter</li>
             <ul>
           </p>
+        </section>
+        <!-- slide 10-->
+        <section>
+          <h2>
+            <a
+              href="">irb
+            in Ruby</a>
+          </h2>
+          <pre><code data-trim data-noescape>
+            $ irb >
+            Book = Struct.new(:title)
+
+            def find_book(title)
+              books = []
+              books << Book.new('Eloquent Ruby')
+
+              books.find { |b| b.title == title }
+            end
+
+            book = find_book('Eloquent Ruby')
+            p book # This will print our book object
+
+            book = find_book('POODR')
+            p book # This will print nil
+
+            book.name # Guess what happens next :)
+          </code></pre>
         </section>
         <!-- slide 10-->
         <section>
@@ -94,6 +122,15 @@
 example.rb:8:in `block in powersOfTwo':
 undefined local variable or method `newArr'
 for main:Object (NameError)
+          </code></pre>
+        </section>
+        <section>
+          <h1>Stack Trace</h1>
+          <p>follow the breadcrumbs to what happened</p>
+          <pre><code data-trim data-noescape>
+/tmp/stack.rb:6:in 'method2': undefined local variable or method 'invalid_variable' for main:Object (NameError)
+    from /tmp/stack.rb:2:in 'method1'
+    from /tmp/stack.rb:9:in '<main>'
           </code></pre>
         </section>
         <!-- slide 11-->
@@ -116,6 +153,7 @@ for main:Object (NameError)
             # [1,2,4]
           </code></pre>
         </section>
+        <!-- slide 12-->
         <section>
           <h2>What is the difference between <em style="color:green">puts</em> and
             <em style="color:pink">print</em>?</h2>
@@ -138,33 +176,50 @@ for main:Object (NameError)
           </code></pre>
           <p>into your program.</p>
         </section>
+        <!-- slide 13-->
         <section>
           <h2>
             Setting a breakpoint
           </h2>
           <pre><code data-trim data-noescape>
-            binding.pry
+def powersOfTwo(n)
+  newArr = []
+  (0..n).to_a.each_with_index do |x, i|
+    binding.pry # breakpoint set
+    newArr.push(2*i)
+  end
+
+  newArr
+end
           </code></pre>
-        </section>
-        <!-- slide 14-->
-        <section>
-          <h2>
-            <a
-              href="">irb
-            in Ruby</a>
-          </h2>
-          <pre><code data-trim data-noescape>
-            # text example TBD
-          </code></pre>
+# the problem is return the wrong answer, set a breakpoint to find out what is wrong
+
+def powersOfTwo(n)
+  newArr = []
+  (0..n).to_a.each_with_index do |x, i|
+    # set a print to see what's happening
+    # p i
+    byebug
+    newArr.push(2*i)
+  end
+
+  newArr
+end
+
+puts powersOfTwo(2)
+# [1,2,4]
         </section>
         <!-- slide 14-->
 				<section>
           <h1>The End</h1>
           <ul>
             <li><a href="bit.ly/blocRubyDebug/">bit.ly/blocRubyDebug/<a></li>
+            <li><a href="http://batsov.com/rubocop/">gem install rubocop<a></li>
             <li><a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback
               Survey</a></li>
+            <li><a href="https://atom.io/packages/linter-rubocop">Add ruby linter to
+                Atom<a></li>
           </ul>
         </section>
 			</div>
