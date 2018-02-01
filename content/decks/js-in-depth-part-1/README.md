@@ -1,3 +1,6 @@
+## Summary
+This session will cover some very important JS concepts in depth. We will cover the meaning of `this`. 
+Also answer what are clousures, Scope and take a look at how Async code is achieved in JS. 
 #### Prerequisite (Group Session) 
  The browser and JS engine:
  JS Engine Basics: (you should know these concepts)
