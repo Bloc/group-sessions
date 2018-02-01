@@ -2,4 +2,4 @@
 
 - You must have time to focus.
 - Get others to support you.
-- Turn off distractions. 
+- Turn off distractions.
