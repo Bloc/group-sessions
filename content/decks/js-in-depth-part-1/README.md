@@ -9,6 +9,7 @@ Also answer what are clousures, Scope and take a look at how Async code is achie
     2. Code Execution
     3. Event Queue
     
+## What this course covers    
 1. this
 
     1. the apps first this
