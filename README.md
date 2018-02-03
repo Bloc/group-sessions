@@ -8,6 +8,7 @@ Group Session Content
 |Session Title|Objectives|
 |-|-|
 |[Intermediate Git & GitHub](https://bloc.github.io/group-sessions/content/decks/intermediate-git-github)|Increase skills needed to collaborate with projects on GitHub|
+|[The Browser & JavaScript Engine](https://bloc.github.io/group-sessions/content/decks)|This course starts with a high-level overview of how the browser renders a web page from start to finish (Http, Html, CSS, JS ). Then moves on to looking at what happens when JavaScript runs in the browser. If you want to understand JavaScript better, then this the course for you.|
 |[JavaScript Debugging](https://bloc.github.io/group-sessions/content/decks/javascript-debugging)|Become comfortable using Chrome Console|
 |[Intro to Git & Github](https://bloc.github.io/group-sessions/content/decks/git-basics)|Get clarity on your basic git skills, learn how to solve problems!|
 |[Ruby Debugging](https://bloc.github.io/group-sessions/content/decks/ruby-debugging)|Gain knowledge on debugging tools in Ruby!|
