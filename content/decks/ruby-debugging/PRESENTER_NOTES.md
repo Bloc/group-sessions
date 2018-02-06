@@ -75,13 +75,16 @@ leverage online repls for this lecture, leverage the terminal showing students i
 3. The linter example link include a link to eslint. Paste the code from
 the example and have students mob program to a solution with you. 
 
-https://eslint.org/demo/
-
 ## Slide 13 - Setting a breakpoint
 1. Explain pry
 2. add binding.pry to the bug.rb
 3. run it in terminal
 
-## Slide 14
+## Slide 14 - Setting a breakpoint
+1. Explain why you would want to use error handling
+2. Add a rescue to the math method
+3. Rescue 0
+
+## Slide 15
 
 Take questions if time is available. Be sure to share feedback and slide link.
