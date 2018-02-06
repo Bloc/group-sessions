@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Ruby Debugging</title>
+		<title>Testing in Ruby</title>
 
 		<link rel="stylesheet" href="../../css/reveal.css">
 		<link rel="stylesheet" href="../../css/theme/black.css">
@@ -32,7 +32,7 @@
         <!-- slide 2-->
         <section>
           <h1>Links</h1>
-          <p><a href="bit.ly/blocRubyDebug/">bit.ly/blocRubyDebug/<a></p>
+          <p><a href="bit.ly/blocRubyTesting/">bit.ly/blocRubyTesting/<a></p>
           <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback Survey</a></p>
         </section>
         <!-- slide 3-->
@@ -44,9 +44,9 @@
         <section>
           <h1>Overview</h1>
           <ol>
-            <li>debugging life cycle</li>
-            <li>debugging tools</li>
-            <li>debugging approach</li>
+            <li>Types of Testing</li>
+            <li>What to test</li>
+            <li>The approach</li>
           </ol>
         </section>
         <!-- slide 5-->
@@ -59,57 +59,40 @@
         </section>
         <!-- slide 6-->
         <section>
-          <h1>The Struggle is Real</h1>
-          <p>You should be open to struggling for at least 30-40mins on a problem</p>
-        </section>
-        <!-- slide 7-->
-        <section>
-          <h1>Debugging Cycle</h1>
-          <img src="./lib/img/cycle.gif"/>
-        </section>
-        <!-- slide 8-->
-        <section>
-          <h1>Debugging Cycle</h1>
-          <img src="./lib/img/cycle.png"/>
-        </section>
-        <!-- slide 9-->
-				<section>
-          <h1>Debugging Tools</h1>
+          <h1>Things to consider </h1>
           <p>
             <ul>
-              <li>irb</li>
-              <li>printing something to the terminal</li>
-              <li>setting breakpoints</li>
-              <li>Linter</li>
+              <li>• Tests should be reliable.</li>
+              <li>• Tests should be easy to write.</li>
+              <li>• Tests should be easy to understand.</li>
             <ul>
           </p>
         </section>
-        <!-- slide 10-->
+        <!-- slide 7-->
         <section>
-          <h2>
-            <a
-              href="">irb
-            in Ruby</a>
-          </h2>
-          <pre><code data-trim data-noescape>
-            $ irb >
-            Book = Struct.new(:title)
+          <h1>Types of testing </h1>
+          <p>
+            <ul>
+              <li>Unit testing</li>
+              <li>Integration testing</li>
+              <li></li>
+            <ul>
+          </p>
+        </section>
+        <!-- slide 7-->
+        <section>
+          <h2>What is the difference between <em style="color:green">Minitest</em> and
+            <em style="color:pink">Rspec</em>?</h2>
+          <p><a
+            href="https://stackoverflow.com/questions/5018633/what-is-the-difference-between-print-and-puts">click
+            to see answer</a></p>
 
-            def find_book(title)
-              books = []
-              books << Book.new('Eloquent Ruby')
-
-              books.find { |b| b.title == title }
-            end
-
-            book = find_book('Eloquent Ruby')
-            p book # This will print our book object
-
-            book = find_book('POODR')
-            p book # This will print nil
-
-            book.name # Guess what happens next :)
-          </code></pre>
+        </section>
+        <!-- slide 9-->
+				<section>
+          <h1>Testing Setup</h1>
+          <p>
+          </p>
         </section>
         <!-- slide 10-->
         <section>
@@ -133,30 +116,9 @@ for main:Object (NameError)
     from /tmp/stack.rb:9:in '<main>'
           </code></pre>
         </section>
-        <!-- slide 11-->
-				<section>
-          <h1>Let's squash bugs</h1>
-          <p><a
-            href="https://gist.github.com/bdougie/ae926e797416c434c1396a474e2d3d5a">Link
-          to gist</a></p>
-          <pre><code data-trim data-noescape>
-            def powersOfTwo(n)
-              newArr = []
-              (0..n).to_a.each_with_index do |x, i|
-                newArr.push(2*i)
-              end
-
-              newArr
-            end
-
-            # powersOfTwo(2)
-            # [1,2,4]
-          </code></pre>
-        </section>
         <!-- slide 12-->
         <section>
-          <h2>What is the difference between <em style="color:green">puts</em> and
-            <em style="color:pink">print</em>?</h2>
+          <h2>Should I <em style="color:green">TDD</em>?</h2>
           <p><a
             href="https://stackoverflow.com/questions/5018633/what-is-the-difference-between-print-and-puts">click
             to see answer</a></p>
