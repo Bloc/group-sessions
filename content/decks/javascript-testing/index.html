@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Testing in JavaScript</title>
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <!-- slide 1-->
+        <section>
+          <h1>Testing in JavaScript</h1>
+          <p>Brian Douglas</p>
+        </section>
+        <!-- slide 2-->
+        <section>
+          <h1>Links</h1>
+          <p><a href="bit.ly/blocjavascriptTesting/">bit.ly/blocJavaScriptTesting/<a></p>
+          <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback Survey</a></p>
+        </section>
+        <!-- slide 3-->
+        <section>
+          <h1>github/bdougie</h1>
+          <a href="https://github.com/bdougie"><img src="./lib/img/bdougie.png"/></a>
+        </section>
+        <!-- slide 4-->
+        <section>
+          <h1>Overview</h1>
+          <ol>
+            <li>Types of Testing</li>
+            <li>Setup Rspec</li>
+            <li>The approach</li>
+          </ol>
+        </section>
+        <!-- slide 5-->
+        <section>
+          <h1>Expectation</h1>
+          <ul>
+            <li>You should have a basic understanding of JavaScript</li>
+            <li>Please particpate by answering my questions 😺</li>
+          </ul>
+        </section>
+        <!-- slide 5-->
+        <section>
+          <h1>how confident are you with testing?</h1>
+        </section>
+        <!-- slide 6-->
+        <section>
+          <h1>Things to consider </h1>
+          <p>
+            <ul>
+              <li>Tests should be reliable.</li>
+              <li>Tests should be easy to write.</li>
+              <li>Tests should be easy to understand.</li>
+            <ul>
+          </p>
+        </section>
+        <!-- slide 7-->
+        <section>
+          <h1>Types of testing </h1>
+          <p>
+            <ul>
+              <li>Unit testing (<a
+                                                    href="https://github.com/facebook/jest">jest</a> or <a
+                                                    href="https://github.com/mochajs/mocha">mocha</a>)</li>
+              <li>Integration testing (<a
+                                                    href"https://github.com/substack/tape">tape</a>)</li>
+              <li>Acceptance testing (<a
+                                                    href="https://codecept.io/">Codecept</a>)</li>
+            <ul>
+          </p>
+        </section>
+        <!-- slide 7-->
+        <section>
+          <h1>Types of testing </h1>
+          <img src="https://cdn-images-1.medium.com/max/1600/1*UtZzMT32fRMnSN-HmgiSVQ.gif" />
+        </section>
+        <!-- slide 9-->
+				<section>
+          <h1>Testing Setup</h1>
+          <pre><code data-trim data-noescape>
+describe("Solution", function(){
+  it("should test for something", function(){
+    Test.assertEquals("actual", "expected", "This is just an example of how you can write your own TDD tests");
+  });
+});
+          </code></pre>
+        </section>
+        <!-- slide 10-->
+        <section>
+          <h1>The Problem</h1>
+          <a
+            href="https://www.codewars.com/kata/fizzbuzz-array-custom/train/javascript">Test
+          Custom FizzBuzz</a>
+          <pre><code data-trim data-noescape>
+fizzBuzzCustom()[15]                         // returns 16
+fizzBuzzCustom()[44]                         // returns "FizzBuzz" (45 is divisible by 3 and 5)
+fizzBuzzCustom('Hey', 'There')[25]         // returns 26
+fizzBuzzCustom('Hey', 'There')[11]         // returns "Hey" (12 is divisible by 3)
+fizzBuzzCustom("What's ", "up?", 3, 7)[80] // returns "What's " (81 is divisible by 3)
+          </code></pre>
+        </section>
+        <!-- slide 12-->
+        <section>
+          <h2>Should I <a
+          href="https://en.wikipedia.org/wiki/Test-driven_development">TDD</a>?</h2>
+          <p><a
+            href="https://memegenerator.net/img/instances/500x/58097633/what-if-i-told-you-it-depends.jpg">click
+            to see answer</a></p>
+        </section>
+        <!-- slide 14-->
+				<section>
+          <h1>The End</h1>
+          <ul>
+            <li><a href="bit.ly/blocJavaScriptDebug/">bit.ly/blocJavaScriptDebug/<a></li>
+            <li><a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback
+              Survey</a></li>
+            <li><a href="https://github.com/mrdavidlaing/javascript-koans">JavaScript Koans<a></li>
+            <li><a href="https://facebook.github.io/jest/">Jest docs<a></li>
+            <li><a
+                href="https://www.sitepoint.com/javascript-testing-unit-functional-integration/">JavaScript
+                Testing<a></li>
+          </ul>
+        </section>
+			</div>
+		</div>
+
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../../plugin/markdown/marked.js' },
+					{ src: '../../plugin/markdown/markdown.js' },
+					{ src: '../../plugin/notes/notes.js', async: true },
+					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
