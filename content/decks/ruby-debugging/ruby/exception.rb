@@ -7,8 +7,8 @@ def print_something
 end
 
 def run_program
-  output = do_some_math(4)
-  print_something if output > 0
+  do_some_math(4)
+  print_something
 end
 
 run_program

@@ -17,7 +17,7 @@ end
 
 def run_program
   output = do_some_math(0)
-  print_something if output > 0
+  output > 0 ? print_something : print_something_else
 end
 
 run_program
