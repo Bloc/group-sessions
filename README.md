@@ -15,5 +15,5 @@ Group Session Content
 |[How Professionals Do the Work](https://bloc.github.io/group-sessions/content/decks/pros-do-the-work)|Hear from a professional, what it's like to write code, and how to do it well.|
 |[Thoughts on Code](https://bloc.github.io/group-sessions/content/decks/thoughts-on-code)|Wonder how to write good code no longer! Let a professional tell you how it's done.|
 |[Testing Principles](https://bloc.github.io/group-sessions/content/decks/testing-principles)|Level up your testing skills, hear about the principles behind testing, and how to make those decisions.|
-|[JavaScript Testing](https://bloc.github.io/group-sessions/content/decks/ruby-testing)|IIncrease skills needed to test in JavaScript
-|[Ruby Testing](https://bloc.github.io/group-sessions/content/decks/javavascript-testing)|Increase skills needed to test in Ruby
+|[JavaScript Testing](https://bloc.github.io/group-sessions/content/decks/ruby-testing)|IIncrease skills and awareness needed to test in JavaScript
+|[Ruby Testing](https://bloc.github.io/group-sessions/content/decks/javavascript-testing)|Increase skills and awareness needed to test in Ruby
