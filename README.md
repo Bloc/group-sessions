@@ -16,3 +16,5 @@ Group Session Content
 |[Testing Principles](https://bloc.github.io/group-sessions/content/decks/testing-principles)|Level up your testing skills, hear about the principles behind testing, and how to make those decisions.|
 |[The Job Wants You - Part One](https://bloc.github.io/group-sessions/content/decks/the-job-wants-you-p1)|The right job is out there, but how do you find it? Come get some tips and tricks and change the way you think about the job search!
 |[The Job Wants You - Part Two](https://bloc.github.io/group-sessions/content/decks/the-job-wants-you-p2)|Prerequisite: The Job Wants You Part One. Now not it is time to get your Sparkle On!
+|[JavaScript Testing](https://bloc.github.io/group-sessions/content/decks/javascript-testing)|Increase skills needed to collaborate with projects on GitHub|
+|[Ruby Testing](https://bloc.github.io/group-sessions/content/decks/ruby-testing)|Increase skills needed to collaborate with projects on GitHub|
