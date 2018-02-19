@@ -123,20 +123,28 @@ test('...initial', assert => {
             <h2><a href="http://chaijs.com/plugins/chai-webdriver/">Integration Test
                 Example</a></h2>
           <pre><code data-trim data-noescape>
-// Start with a webdriver instance:
-var sw = require('selenium-webdriver');
-var driver = new sw.Builder()
-  .withCapabilities(sw.Capabilities.chrome())
-  .build()
+// import test from 'tape';
 
-// And then...
-var chai = require('chai');
-var chaiWebdriver = require('chai-webdriver');
-chai.use(chaiWebdriver(driver));
+import createLog from 'shared/logger';
+import routeRoute from 'routes/my-route';
 
-// And you're good to go!
-driver.get('http://github.com');
-chai.expect('#site-container h1.heading').dom.to.not.contain.text("I'm a kitty!");
+test('logger/route integration', assert => {
+  const msg = 'Logger logs router calls to memory';
+
+  const logMsg = 'hello';
+  const url = `http://127.0.0.1/msg/${ logMsg }`;
+
+  const logger = createLog({ output: 'memory' });
+  const routeHandler = createRoute({ logger });
+
+  routeHandler({ url });
+
+  const actual = logger.memoryLog[0];
+  const expected = logMsg;
+
+  assert.equal(actual, expected, msg);
+  assert.end();
+});
           </code></pre>
         </section>
         <!-- slide 10-->
