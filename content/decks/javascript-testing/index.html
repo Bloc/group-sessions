@@ -74,16 +74,19 @@
         </section>
         <!-- slide 7-->
         <section>
-          <h1>Types of testing </h1>
+          <h1><a
+              href="https://www.sitepoint.com/javascript-testing-unit-functional-integration/">Types
+              of testing </a></h1>
           <p>
             <ul>
               <li>Unit testing (<a
                                                     href="https://github.com/facebook/jest">jest</a> or <a
-                                                    href="https://github.com/mochajs/mocha">mocha</a>)</li>
+                                                    href="https://github.com/mochajs/mocha">mocha</a>) - small focus</li>
               <li>Integration testing (<a
-                                                    href"https://github.com/substack/tape">tape</a>)</li>
+                                                    href"https://github.com/substack/tape">tape</a>
+                                                  or <a href="http://chaijs.com/">chai</a>) - putting the pieces together</li>
               <li>Acceptance testing (<a
-                                                    href="https://codecept.io/">Codecept</a>)</li>
+                                                    href="https://codecept.io/">Codecept</a>) - no code, just clicking</li>
             <ul>
           </p>
         </section>
@@ -91,6 +94,70 @@
         <section>
           <h1>Types of testing </h1>
           <img src="https://cdn-images-1.medium.com/max/1600/1*UtZzMT32fRMnSN-HmgiSVQ.gif" />
+        </section>
+        <!-- slide 10-->
+        <!-- slide 10-->
+        <section>
+          <h2><a href="https://www.sitepoint.com/javascript-testing-unit-functional-integration/">Unit Test
+              Example</a></h2>
+          <pre><code data-trim data-noescape>
+import test from 'tape';
+import hello from 'store/reducers/hello';
+
+test('...initial', assert => {
+  const message = `should set { mode: 'display', subject: 'world' }`;
+
+  const expected = {
+    mode: 'display',
+    subject: 'World'
+  };
+
+  const actual = hello();
+
+  assert.deepEqual(actual, expected, message);
+  assert.end();
+});
+          </code></pre>
+        </section>
+        <section>
+            <h2><a href="http://chaijs.com/plugins/chai-webdriver/">Integration Test
+                Example</a></h2>
+          <pre><code data-trim data-noescape>
+// Start with a webdriver instance:
+var sw = require('selenium-webdriver');
+var driver = new sw.Builder()
+  .withCapabilities(sw.Capabilities.chrome())
+  .build()
+
+// And then...
+var chai = require('chai');
+var chaiWebdriver = require('chai-webdriver');
+chai.use(chaiWebdriver(driver));
+
+// And you're good to go!
+driver.get('http://github.com');
+chai.expect('#site-container h1.heading').dom.to.not.contain.text("I'm a kitty!");
+          </code></pre>
+        </section>
+        <!-- slide 10-->
+        <section>
+            <h2><a href="https://www.sitepoint.com/javascript-testing-unit-functional-integration/">Acceptance Test
+                Example</a></h2>
+          <pre><code data-trim data-noescape>
+module.exports = {
+  'Demo test Google' : function (browser) {
+    browser
+      .url('http://www.google.com')
+      .waitForElementVisible('body', 1000)
+      .setValue('input[type=text]', 'nightwatch')
+      .waitForElementVisible('button[name=btnG]', 1000)
+      .click('button[name=btnG]')
+      .pause(1000)
+      .assert.containsText('#main', 'Night Watch')
+      .end();
+  }
+};
+          </code></pre>
         </section>
         <!-- slide 9-->
 				<section>
@@ -105,19 +172,7 @@ describe("Solution", function(){
 });
           </code></pre>
         </section>
-        <!-- slide 10-->
-        <section>
-          <h1>Examples</h1>
-          <ul>
-            <li><a href="https://repl.it/repls/SweetCrushingAbilities">Unit Test</a></li>
-            <li><a href="https://github.com/substack/tape#example">Integration
-                Test</a></li>
-            <li><a
-                   href="https://github.com/Codeception/CodeceptJS/blob/master/examples/yahoo_test.js">Acceptance
-              Test</a></li>
-          </ul>
-        </section>
-        <!-- slide 10-->
+        <!-- slide 12-->
         <section>
           <h1>The Problem</h1>
           <a
@@ -131,7 +186,6 @@ fizzBuzzCustom('Hey', 'There')[11]         // returns "Hey" (12 is divisible by 
 fizzBuzzCustom("What's ", "up?", 3, 7)[80] // returns "What's " (81 is divisible by 3)
           </code></pre>
         </section>
-        <!-- slide 12-->
         <section>
           <h2>Should I <a
           href="https://en.wikipedia.org/wiki/Test-driven_development">TDD</a>?</h2>
