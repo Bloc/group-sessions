@@ -9,7 +9,3 @@ function fizzBuzzCustom(stringOne, stringTwo, numOne, numTwo) {
 };
 
 ```
-
-
-
-

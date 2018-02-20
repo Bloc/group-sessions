@@ -1,4 +1,4 @@
-function fizzBuzzCustom(stringOne, stringTwo, numOne, numTwo) {
+function fizzBuzzCustom(stringOne = "Fizz", stringTwo = "Buzz", numOne, numTwo) {
 
 };
 

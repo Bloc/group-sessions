@@ -1,7 +1,7 @@
 const fizzBuzzCustom = require("./fizzbuzz.js");
 
-describe("fizzBuzzCustom()[15] should return 16", function(){
-  it("should return a value", function(){
+describe("fizzBuzzCustom()", function(){
+  it("should return 16 when given 15", function(){
     const result = fizzBuzzCustom()[15]
     expect(result).toBe(16)
   });
