@@ -119,8 +119,8 @@
             <li>Opportunity for Googling</li>
           </ul>
           <pre><code data-trim data-noescape>
-example.rb:8:in `block in powersOfTwo':
-undefined local variable or method `newArr'
+example.rb:8:in `block in powers_of_two':
+undefined local variable or method `new_arr'
 for main:Object (NameError)
           </code></pre>
         </section>
@@ -140,16 +140,16 @@ for main:Object (NameError)
             href="https://github.com/bdougie/ruby_session_examples">Link
           to examples</a></p>
           <pre><code data-trim data-noescape>
-            def powersOfTwo(n)
-              newArr = []
+            def powers_of_two(n)
+              new_arr = []
               (0..n).to_a.each_with_index do |x, i|
-                newArr.push(2*i)
+                new_arr(2*i)
               end
 
-              newArr
+              new_arr
             end
 
-            # powersOfTwo(2)
+            # powers_of_two(2)
             # [1,2,4]
           </code></pre>
         </section>
@@ -184,14 +184,14 @@ for main:Object (NameError)
             Setting a breakpoint
           </h2>
           <pre><code data-trim data-noescape>
-def powersOfTwo(n)
-  newArr = []
+def powers_of_two(n)
+  new_arr = []
   (0..n).to_a.each_with_index do |x, i|
     binding.pry # breakpoint set
-    newArr.push(2*i)
+    new_arr(2*i)
   end
 
-  newArr
+  new_arr
 end
           </code></pre>
         </section>
