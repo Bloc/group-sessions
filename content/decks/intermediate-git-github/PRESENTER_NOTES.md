@@ -40,6 +40,11 @@ Point out that there is a link reference the upstream on your forked
 repo.
 
 ## Slide 10
+**Ask students** if they know the difference between Fork and Clone.
+
+Answer: https://stackoverflow.com/questions/7057194/what-is-the-difference-between-forking-and-cloning-on-github
+
+## Slide 11
 Clone the fork locally. Show off that the code has been copied locally. 
 
 **Ask students** if they know the difference between SSH or cloning via
@@ -48,30 +53,25 @@ URL
 Encourage students to use SSH for better security and leverage the link documentation on how
 to do so.
 
-## Slide 11
-**Ask students** if they know the difference between Fork and Clone.
-
-Answer: https://stackoverflow.com/questions/7057194/what-is-the-difference-between-forking-and-cloning-on-github
-
 ## Slide 12
+1. add a new cat breed to cat.js
+2. create a new branch for your changes
+3. create a pull request to the upstream
+4. Reject the PR to rebase the `one-more-kitty` branch
+
+## Slide 13
 Create a remote pointing the upstream. Note that this will come in handy
 later
 
-## Slide 13
+## Slide 14
 Create a remote pointing the fork and name it fork
 
-## Slide 14
+## Slide 15
 1. Create use `git remote -v` to show three remotes and note that GitHub
 creates the origin by default.
 2. Remove the fork remote using `git remote remove`.
 3. Open the `.git/config` to show you can also rename a remote directly.
 4. Change then name of origin to fork.
-
-## Slide 15
-1. add a new cat breed to cat.js
-2. create a new branch for your changes
-3. create a pull request to the upstream
-4. Reject the PR to rebase the `one-more-kitty` branch
 
 ## Slide 16
 1. Fetch the `one-more-kitty` branch
