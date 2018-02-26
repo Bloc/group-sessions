@@ -18,6 +18,6 @@
 //   });
 //   it("should return 80 when given Whats's", function(){
 //     const result = fizzBuzzCustom("What's", "up", 3, 7)[80]
-//     expect(result).toBe("FizzBuzz")
+//     expect(result).toBe("Whats's")
 //   });
 // });
