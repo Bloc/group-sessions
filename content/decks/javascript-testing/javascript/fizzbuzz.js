@@ -1,5 +1,4 @@
-function fizzBuzzCustom(stringOne = "Fizz", stringTwo = "Buzz", numOne, numTwo) {
-
+function fizzBuzzCustom(stringOne, stringTwo, numOne, numTwo) {
 };
 
 module.exports = fizzBuzzCustom;
