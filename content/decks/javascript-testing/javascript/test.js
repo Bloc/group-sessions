@@ -5,6 +5,10 @@ describe("fizzBuzzCustom()", function(){
     const result = fizzBuzzCustom()[15]
     expect(result).toBe(16)
   });
+  it("should return 44 when given Fizzbuzz", function(){
+    const result = fizzBuzzCustom()[45]
+    expect(result).toBe("FizzBuzz")
+  });
 });
 
 // fizzBuzzCustom()[44]                         // returns "FizzBuzz" (45 is divisible by 3 and 5)
