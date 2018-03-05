@@ -17,3 +17,4 @@ Group Session Content
 |[Testing Principles](https://bloc.github.io/group-sessions/content/decks/testing-principles)|Level up your testing skills, hear about the principles behind testing, and how to make those decisions.|
 |[JavaScript Testing](https://bloc.github.io/group-sessions/content/decks/javascript-testing)|Increase skills and awareness needed to test in JavaScript
 |[Ruby Testing](https://bloc.github.io/group-sessions/content/decks/ruby-testing)|Increase skills and awareness needed to test in Ruby
+|[Ruby in Depth](https://bloc.github.io/group-sessions/content/decks/ruby-in-depth)|Increase skills and awareness needed to test in Ruby
