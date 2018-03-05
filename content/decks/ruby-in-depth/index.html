@@ -1,0 +1,435 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Ruby in Depth</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>Ruby In Depth</h1>
+            </h4>Brian Douglas</h4>
+        </section>
+        <section>
+          <h1>Links</h1>
+          <p><a href="">bit.ly/rubyindepth<a></p>
+          <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback Survey</a></p>
+        </section>
+        <!-- slide 3-->
+        <section>
+          <h1>Overview</h1>
+          <ol>
+            <li>Objects</li>
+            <li>Managing Dependencies</li>
+            <li>Composition vs Inheritance</li>
+          </ol>
+        </section>
+        <!-- slide 4-->
+        <section>
+          <h1>Expectation</h1>
+          <ul>
+            <li>You should have a basic understanding of Ruby</li>
+            <li>Please particpate by answering my questions 😺</li>
+          </ul>
+        </section>
+        <section>
+            <h1>Objects</h1>
+            <p>Everything in Ruby is an Object</p>
+        </section>
+        <section>
+            <h1>Objects</h1>
+            <p>The foundation of an object-oriented programming is the sending
+              and receiving of
+              <em>messages</em></p>
+
+        </section>
+        <section>
+            <h1>Object Messages</h1>
+            <img src="./lib/img/bike.png"/>
+        </section>
+        <section>
+          <h2>Organizing the Message</h2>
+
+          <pre><code data-trim data-noescape>
+chainring = 52 # number of teeth
+cog = 11
+ratio = chainring / cog.to_f puts ratio
+
+puts ratio # -> 4.72727272727273
+
+chainring = 30
+cog = 27
+ratio = chainring / cog.to_f puts ratio
+
+puts ratio # -> 1.11111111111111
+          </code></pre>
+
+        </section>
+        <section>
+          <h2>No side effects in the message</h2>
+
+          <pre><code data-trim data-noescape>
+class Gear
+  attr_reader :chainring, :cog
+
+  def initialize(chainring, cog)
+    @chainring = chainring
+    @cog = cog
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+end
+
+puts Gear.new(52, 11).ratio
+puts Gear.new(30, 27).ratio
+          </code></pre>
+
+        </section>
+        <section>
+           <h2>Rule of Thumb</h2>
+            <p>model your application in a way
+              it does what it is supposed to do right now and is also easy to
+              change later.
+            </p>
+
+        </section>
+        <section>
+          <h2>Easy to change</h2>
+
+          <pre><code data-trim data-noescape>
+class Gear
+  attr_reader :chainring, :cog, :rim, :tire 
+  def initialize(chainring, cog, rim, tire)
+    @chainring = chainring
+    @cog       = cog
+    @rim       = rim
+    @tire      = tire
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+
+  def gear_inches
+    # tire goes around rim twice for diameter
+    ratio * (rim + (tire * 2))
+  end
+end
+
+puts Gear.new(52, 11, 26, 1.5).gear_inches      # -> 137.090909090909
+puts Gear.new(52, 11, 24, 1.25).gear_inches     # -> 125.272727272727
+          </code></pre>
+
+        </section>
+        <section>
+          <h2>Managing Dependencies</h2>
+          <p>A single object cannot know everything, so inevitably it will have
+            to talk to another object.</p>
+        </section>
+        <section>
+          <h2>Managing Dependencies</h2>
+
+          <pre><code data-trim data-noescape>
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(chainring, cog, rim, tire)
+    @chainring = chainring
+    @cog = cog
+    @wheel = Wheel.new(rim, tire)
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+
+  def gear_inches
+    ratio * wheel.diameter
+  end
+
+  Wheel = Struct.new(:rim, :tire) do
+    def diameter
+      rim + (tire * 2)
+    end
+  end
+end
+          </code></pre>
+
+        </section>
+        <section>
+          <h2>Single Responsisbity Principle</h2>
+
+          <pre><code data-trim data-noescape>
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(chainring, cog, wheel=nil)
+    @chainring = chainring
+    @cog       = cog
+    @wheel     = wheel
+  end
+  def ratio
+    chainring / cog.to_f
+  end
+  def gear_inches
+    ratio * wheel.diameter
+  end
+end
+
+class Wheel
+  attr_reader :rim, :tire
+
+  def initialize(rim, tire) @rim = rim
+    @tire = tire
+  end
+
+  def diameter
+    rim + (tire * 2)
+  end
+
+  def circumference
+    diameter * Math::PI
+  end
+end
+
+@wheel = Wheel.new(26, 1.5) puts @wheel.circumference # -> 91.106186954104
+puts Gear.new(52, 11, @wheel).gear_inches # -> 137.090909090909
+puts Gear.new(52, 11).ratio # -> 4.72727272727273
+          </code></pre>
+
+        </section>
+        <section>
+            <h1>The Law of Demeter</h1>
+            <p>a set of coding rules that results in loosely coupled objects.
+              Loose coupling is nearly always a virtue but is just one component
+              of design and must be balanced against competing needs.</p>
+        </section>
+        <section>
+          <h1>The Law of Demeter</h1>
+          <pre><code data-trim data-noescape>
+customer.bicycle.wheel.tire
+customer.bicycle.wheel.rotate
+hash.keys.sort.join(', ')
+          </code></pre>
+        </section>
+        </section>
+        <section>
+          <h1>The Law of Demeter</h1>
+          <img src="https://media.karousell.com/media/photos/products/2017/12/29/matryoshka_doll__russian_dolls_1514553245_c0063fa9.jpg"/>
+        </section>
+        <section>
+            <h1>Object-oriented design</h1>
+            <p>The purpose of object-oriented design is to reduce the cost of change.</p>
+        </section>
+        <section>
+            <h1>Duck Typing</h1>
+            <p>The purpose of object-oriented design is to reduce the cost of change.</p>
+          <pre><code data-trim data-noescape>
+class Driver
+  def prepare_trip(trip)
+    vehicle = trip.vehicle
+    gas_up(vehicle)
+    fill_water_tank(vehicle)
+  end
+end
+          </code></pre>
+        </section>
+        <section>
+            <h1>Duck Typing</h1>
+            <p>The purpose of object-oriented design is to reduce the cost of change.</p>
+          <pre><code data-trim data-noescape>
+class Trip
+  attr_reader :bicycles, :customers, :vehicle
+  def prepare(preparers)
+    preparers.each do |preparer|
+      case preparer
+      when Mechanic
+        preparer.prepare_bicycles(bicycles)
+      when TripCoordinator
+        preparer.buy_food(customers)
+      when Driver
+        preparer.gas_up(vehicle)
+        preparer.fill_water_tank(vehicle)
+      end
+    end
+  end
+end
+          </code></pre>
+        </section>
+        <section>
+            <h1>Composition vs Iheritance</h1>
+        </section>
+        <section>
+            <h2>Inheritance</h2>
+          <pre><code data-trim data-noescape>
+class Bicycle
+  attr_reader :size # <- promoted from RoadBike
+  def initialize(args={})
+    @size = args[:size] # <- promoted from RoadBike
+  end
+end
+
+class RoadBike < Bicycle
+  attr_reader :tape_color
+
+  def initialize(args)
+    @tape_color = args[:tape_color]
+    super(args) # <- RoadBike now MUST send 'super'
+  end
+
+  # ...
+end
+          </code></pre>
+        </section>
+        <section>
+            <h2>Composition</h2>
+          <pre><code data-trim data-noescape>
+class Parts
+  attr_reader :chain, :tire_size
+  def initialize(args={})
+    @chain = args[:chain] || default_chain
+    @tire_size = args[:tire_size] || default_tire_size
+    post_initialize(args)
+  end
+
+  def spares
+    { tire_size: tire_size,
+        chain:     chain}.merge(local_spares)
+  end
+  def default_tire_size
+    raise NotImplementedError
+  end
+
+  # subclasses may override
+  def post_initialize(args)
+    nil
+  end
+
+  def local_spares
+    {}
+  end
+
+  def default_chain
+    '10-speed'
+  end
+end
+
+class RoadBikeParts < Parts
+  attr_reader :tape_color
+  def post_initialize(args)
+    @tape_color = args[:tape_color]
+  end
+
+  def local_spares
+    {tape_color: tape_color}
+  end
+
+  def default_tire_size
+    '23'
+  end
+end
+
+class MountainBikeParts < Parts
+  attr_reader :front_shock, :rear_shoc
+  def post_initialize(args)
+    @front_shock = args[:front_shock]
+    @rear_shock = args[:rear_shock]
+  end
+
+  def local_spares
+    {rear_shock: rear_shock}
+  end
+
+  def default_tire_size
+    '2.1'
+  end
+end
+
+road_bike = Bicycle.new(
+  size: 'L',
+  parts: RoadBikeParts.new(tape_color: 'red'))
+
+road_bike.size    # -> 'L'
+
+road_bike.spares
+# -> {:tire_size=>"23",
+#     :chain=>"10-speed",
+#     :tape_color=>"red"}
+
+mountain_bike = Bicycle.new(
+  size: 'L',
+  parts: MountainBikeParts.new(rear_shock: 'Fox'))
+
+mountain_bike.size   # -> 'L'
+mountain_bike.spares
+# -> {:tire_size=>"2.1",
+#     :chain=>"10-speed",
+#     :rear_shock=>"Fox"}
+</code></pre>
+        </section>
+				<section>
+          <h1>Questions</h1>
+        </section>
+        <!-- slide 20-->
+				<section>
+          <h1>The End</h1>
+          <ul>
+            <li><a href="https://bit.ly/blocJSTest/">bit.ly/blocJSTest/<a></li>
+            <li><a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback
+              Survey</a></li>
+            <li><a href="https://github.com/mrdavidlaing/javascript-koans">JavaScript Koans<a></li>
+	    <li><a href="http://exercism.io/">execism.io<a></li>
+
+            <li><a href="https://facebook.github.io/jest/">Jest docs<a></li>
+            <li><a
+                href="https://www.sitepoint.com/javascript-testing-unit-functional-integration/">JavaScript
+                Testing<a></li>
+          </ul>
+        </section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+</script>
+</body>
+</html>
