@@ -61,6 +61,18 @@
               <em>messages</em></p>
 
         </section>
+		<section>
+            <h2>What Message is this object sending/receiving?</h2>
+          <pre><code data-trim data-noescape>
+class Driver
+  def prepare_trip(trip)
+    vehicle = trip.vehicle
+    gas_up(vehicle)
+    fill_water_tank(vehicle)
+  end
+end
+          </code></pre>
+		</section>
         <section>
             <h1>Object Messages</h1>
             <img src="./lib/img/bike.png"/>
