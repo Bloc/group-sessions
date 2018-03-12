@@ -10,74 +10,71 @@ feedback is welcomed
 
 ## Slide 3 - Overview
 Share the topics that will be covered
-- Debug life cycle
-- Tools for debugging
-- Live debugging
 
 ## Slide 4 Expectation
 Encourage students to interact by answering questions about
 the code and tools.
 
-## Slide 5 - Struggle is ok
-Set the expectation that it is ok to struggle whether you are learning
-or been programming for years. The errors are not meant to stump, but to
-learn from.
+## Slide 6 - Question
+The expectaion is that students very little testing experience or
+exposure.
 
-**Ask students** if they have ever struggled on a ruby error
+## Slide 7 - Testing Confidence
 
-## Slide 6 - Debugging Cycle
-The process of debugging code is cyclical in nature. Explain to students
-that programming is repeated cycle of failure or errors. Illustrate, perhaps with a personal experience or anectdote, how you have failed or struggled with an error. 
+## Slide 8 - Types of testing
+Mention that the types of testing are consistent across languages, but
+is possible they called something different
 
-## Slide 7 - Debugging Cycle diagram
-Walk through this slide clockwise, starting with Identify. Leverage the
-copy on the slide, but also leverage your own examples of debugging
-while explaining each concept in the cycle. 
-
-## Slide 8 - Tools
-While sharing the debugging tools, open the Chrome web console in the browser. Also
-show the links to the MDN documentation mentioning `console.log` and
-
-
-**Ask students** if they have ever used irb or breakpoints to debug
-**Ask students** if they have ever used Ruby documentation for finding answers
-
-Linters are something that a small amount of Bloc students have even
-heard of. Be sure to mention this tool and how it will be a bonus at the
-end.
-
-## Slide 9 - Error Message
-**Ask students** what they think the error message is trying to say. 
+## Slide 9 - Tools
+Most of this session will cover the frameworks, mainly Jest.
 
 ## Slide 10  - Stacktrace
 Walk through the stacktrace example using the trace.rb file in the ruby
 folder
 
-## Slide 11 - Code together
-Leverage the link to the Error on the GitHub gist and irb. 
+## Slide 11 - Test example
+Point out that the test is just a function that takes 2 arguments
 
-**Ask students** if they use gist to share code.
+## Slide 15 - Unit v Integration
+Integration is the pieces being put together
 
-_solution to the error: the problem does not return the correct answer
-due to a missing `*` on [line 4](https://gist.github.com/bdougie/ae926e797416c434c1396a474e2d3d5a#file-debug-rb-L7)
+## Slide 13 - Unit example
+## Slide 14 - Integration example
+## Slide 16 - mocks
+Mocks are used a placeholders for dependencies 
 
-1. Walk through solving the error using console.log, be sure to make
-students try to find the answer before you provide the solution. Do not
-leverage online repls for this lecture, leverage the terminal showing students its capabilities.
+## Slide 15 - Acceptance example
+Point out that acceptance testing is use for QA testing and agnostic to
+the language your code is written in
 
-2. Once you have solved the problem, solve the problem again using the
-`pry`. 
+## Slide 17 - Headless browsers
+Mention Headless Chrome, Selenium, and PhantomJS as Headless browser
+solutions
 
-3. The linter example link include a link to eslint. Paste the code from
-the example and have students mob program to a solution with you. 
+## Slide 18 - Questions
+Take questions if students have them. This mateiral can get dense for students.
 
-https://eslint.org/demo/
+## Slide 19 - Writes tests
+You should show TDD and JAvaScript Unit testing by uncommenting the
+completedTests.js file and placing them in the text.js file. You will
+also want to copy the code from the answer markdown files to pass the
+tests. 
 
-## Slide 12 - Setting a breakpoint
-1. Explain pry
-2. add binding.pry to the bug.rb
-3. run it in terminal
+Running through this before the live session is recommend. You will also
+need to run `npm install` while in the javascript folder.
 
-## Slide 13
+Note: there is no test or code to check divisibiilty by 5. Something to
+point out to the students as an exercise to do on their own.
+
+Also note: There is a typo in the last test to show test can be written
+incorrectly and it is important to check you are testing the correct
+thing.
+
+## Slide 20 - TDD question
+Propose this question after you are done. Share your opinons on TDD and
+whther it is normal to use.
+
+## Slide 21 - The End
+Share links and be sure to mention feedback link
 
 Take questions if time is available. Be sure to share feedback and slide link.
