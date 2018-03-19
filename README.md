@@ -12,7 +12,10 @@ Group Session Content
 |[JavaScript Debugging](https://bloc.github.io/group-sessions/content/decks/javascript-debugging)|Become comfortable using Chrome Console|
 |[Intro to Git & Github](https://bloc.github.io/group-sessions/content/decks/git-basics)|Get clarity on your basic git skills, learn how to solve problems!|
 |[Ruby Debugging](https://bloc.github.io/group-sessions/content/decks/ruby-debugging/)|Gain knowledge on debugging tools in Ruby!|
+|[Freelancing Success](https://bloc.github.io/group-sessions/content/decks/freelancing-success)|Learn how to launch yourself into the world of freelancing.|
 |[How Professionals Do the Work](https://bloc.github.io/group-sessions/content/decks/pros-do-the-work)|Hear from a professional, what it's like to write code, and how to do it well.|
+|[The Job Wants You Part One](https://bloc.github.io/group-sessions/content/decks/the-job-wants-you-p1)|An honest and empowering perspective on getting the job.|
+|[The Job Wants You Part Two](https://bloc.github.io/group-sessions/content/decks/the-job-wants-you-p2)|More about an honest and empowering perspective on getting the job.|
 |[Thoughts on Code](https://bloc.github.io/group-sessions/content/decks/thoughts-on-code)|Wonder how to write good code no longer! Let a professional tell you how it's done.|
 |[Testing Principles](https://bloc.github.io/group-sessions/content/decks/testing-principles)|Level up your testing skills, hear about the principles behind testing, and how to make those decisions.|
 |[JavaScript Testing](https://bloc.github.io/group-sessions/content/decks/javascript-testing)|Increase skills and awareness needed to test in JavaScript
