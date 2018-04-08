@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Server-Side JavaScript (Node) in Depth: the Basics</title>
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script>/Users/hbn/Dropbox/group-sessions/content/decks/server-side-javascript-1/plugin/markdown/marked.js</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <!-- slide 1-->
+        <section>
+          <h1>Node in Depth: the Basics</h1>
+          <p><a href="https://www.bloc.io/mentors/henry-nguyen-3">Henry Nguyen</a></p>
+        </section>
+         <!-- slide 2-->
+         <section>
+            <h3>github/henrybv</h3>
+            <a href="https://github.com/henrybv"><img src="./images/henrybv.png"/></a>
+        </section>
+        <!-- slide 3-->
+        <section>
+          <h2>Overview</h2>
+          <ol>
+            <li>Background: Client-Side vs Server-Side JavaScript</li>
+            <li>What is Node.js?</li>
+            <li>The Event Loop</li>
+            <li>Node modules</li>
+          </ol>
+        </section>
+        <!-- slide 4-->
+        <section>
+          <h3>Expectations</h3>
+          <ul>
+            <li>You should have at least a basic understanding of JavaScript 👍</li>
+            <li>Please particpate by answering my questions 😺</li>
+          </ul>
+        </section>
+        <!-- slide 5-->
+          <section>
+              <h3>Links</h3>
+              <p><a href="https://bloc.github.io/group-sessions/content/decks/node-in-depth-1/">SLIDES<a></p>
+              <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback Survey</a></p>
+            </section>
+        <!-- slide 6-->
+        <section>
+            <img src="./images/01-01-client-server-diagram.png"/>
+        </section>
+        <!-- slide 7-->
+        <section>
+          <h3>Client-Side JavaScript</h3>
+          <ul>
+            <li>Also called "front-end code"</li>
+            <li>Code that runs on the client's machine</li>
+            <li>Makes requests to a server; processes, manipulates, and/or renders data that is received in response</li>
+          </ul>
+        </section>    
+        <!-- slide 8-->
+        <section>
+            <img src="./images/client-server-javascript.png" height="70%" width="80%"/>
+        </section>
+        <!-- slide 9-->
+        <section>
+            <ul>
+              <li><b>Client</b>: makes HTTP requests</li>
+              <li><b>Server</b>: responds to HTTP requests</li>
+              <li><b>Request</b>: formatted message sent over network by a client. Contains VERB, URI (route), headers and body.</li>
+              <li><b>Response</b>: a server's reply to a request (formatted message). Contains headers, payload and status.</li>
+              <li><b>Request-Response cycle</b>: the client initiates by sending request, and server completes it by sending exactly 1 response.</li>
+            </ul>
+        </section>
+        <!-- slide 10-->
+				<section>
+          <h3>What is Node.js?</h3>
+          <p><i>Entirely new environment</i> that runs JS.</p>
+          <p><a href="http://nodejs.org/"/>Node.js</a> is a powerful <i>server-side JavaScript platform</i> for building "fast, scalable network applications."</p>
+          <p>
+            <img src="./images/01-02-node-js.svg.png" height="70%" width="80%"/>
+          </p>
+        </section>
+        <!-- slide 11-->
+        <section>
+            <h3>The Chrome V8 engine</h3>
+            <ul>
+              <li><b><i>Node.js</i></b> uses the Google V8 JavaScript engine to execute code, and a large percentage of the basic modules are written in JavaScript."</li>
+              <li><b><i>V8</i></b> compiles JavaScript to native machine code before executing it, instead of more traditional techniques such as interpreting bytecode or compiling the whole program to machine code and executing it from a filesystem."</li>
+            </ul>
+              <img src="./images/google-chrome-v8-javascript-engine.png" height="70%" width="80%"/>
+            </p>
+          </section>
+         <!-- slide 12-->
+				<section>
+          <h3>Which companies use Node?</h3>
+          <p>From leading startups to Fortune 500 companies..</p>
+          <p>
+            <img src="./images/node-js-users.png" height="70%" width="80%"/>
+          </p>
+        </section>
+        <!-- slide 13-->
+        <section>
+            <p>But.. Why is Node.js so popular?</h3>
+            <p>Typical web apps:</p>
+            <p>
+              <img src="./images/server-side-prior.png" height="500" width="450"/>
+            </p>
+        </section>
+        <!-- slide 14-->
+        <section>
+            <p>Single-Page Applications <--> Chrome V8 engine <--> </p>
+            <p><i>Isomorphic JavaScript</i></p>
+            <p>
+              <img src="./images/isomorphic-javascript.png" height="500" width="500"/>
+            </p>
+        </section>
+        <!-- slide 15-->
+        <section>
+            <p>Dichotomy of a fullstack web app built with Node.js</p>
+            <p>
+              <img src="./images/01-03-MEAN-stack-1.png" height="400" width="800"/>
+            </p>
+        </section>
+        <!-- slide 16-->
+        <section>
+            <h3>But really... What is Node.js?</h3>
+            <p><i>"Node.js is an event-driven, asynchronous/ non-blocking I/O platform"</i></p>
+        </section>
+        <!-- slide 17-->
+        <section>
+            <p>Come again?</p>
+            <p>
+              <img src="./images/confused.png" height="500" width="500"/>
+            </p>
+        </section>
+        <!-- slide 18-->
+        <section>
+            <p>Let's break it down..</p>
+            <p><b>"Event-driven"</b>: Node callbacks are made possible by the <i>event loop</i>.</p>
+            <p>
+              <img src="./images/1-7-event-loop.jpg" height="400" width="700"/>
+            </p>
+        </section>
+        <!-- slide 19-->
+        <section>
+            <ul>
+              <li><b>"Synchronous, or blocking"</b>: code runs in sequential order. Program waits for the line of code to finish executing before moving on to the next line of code.</li>
+              <li><b>"Asynchronous, or non-blocking"</b>: code does not wait for the current line to execute before moving on to run the next line.</li>
+            </ul>
+        </section>
+        <!-- slide 20-->
+        <section>
+            <h2>The Event Loop</h2>
+            <p>
+              <img src="./images/event-loop-2.png" height="500" width="1000"/>
+            </p>
+        </section>
+        <!-- slide 21-->
+        <section>
+            <h2>What lies under the hood?</h2>
+            <p>
+              <img src="./images/nodejs-architecture.png" height="600" width="800"/>
+            </p>
+        </section>
+        <!-- slide 22-->
+        <section>
+          <h1>Questions?</h1>
+        </section>
+        <!-- slide 23-->
+        <section>
+          <h3>Node modules</h3>
+          <p>A <a href="https://nodejs.org/docs/latest-v8.x/api/modules.html"/>module</a> is a set of functions or a block of code to include in your application. Node modules ~ "JavaScript libraries".</p>
+        </section>
+        <!-- slide 24-->
+        <section>
+          <h1>Node module demo</h1>
+        </section>
+        <!-- slide 25 -->
+        <section>
+          <p>Before starting, we can set up a new directory and create the necessary files for this project.</p>
+          <h3>
+            Setting Up
+          </h3>
+          <pre><code data-trim data-noescape>
+              ```
+              $ mkdir node-greeting-app
+              $ cd node-greeting-app
+              $ touch greeting.js
+              $ touch main.js
+              ```
+          </code></pre>
+      </section> 
+        <!-- slide 26 -->
+        <section>
+            <h3>greeting.js</h3>
+            <p>We'll create a Node module in `greeting.js`. Add the following lines of code:</p>    
+            <pre><code data-trim contenteditable>
+                ```JavaScript(greeting.js)
+                module.exports = {
+                
+                  greetingEnglish: function() {
+                    console.log("Hello");
+                  },
+                
+                  greetingJapanese: function() {
+                    console.log("Konichiwa");
+                  }
+                };
+            </code></pre>
+            <p>The `module.exports` keyword makes properties and methods available outside the module file.</p>
+        </section>   
+        <!-- slide 27 -->
+        <section>
+            <h3>main.js</h3>
+            <p>The keyword `require` is used in Node to import modules. Now, `main.js` has access to the methods `greetingEnglish` and `greetingJapanese`.</p>
+        
+            <pre><code data-trim contenteditable>
+                ```JavaScript(main.js)
+                const greetings = require("./greeting.js");
+
+                // "Hello"
+                greetings.greetingEnglish();
+
+                // "Bonjour"
+                greetings.greetingFrench);
+                ```
+            </code></pre>
+        </section> 
+        <!-- slide 28 -->
+        <section>
+            <h3>Your first Node module</h3>
+            <p>To test our module, run `node main.js` in the terminal in the `node-greeting-app` directory. You should see the following output in your terminal.</p>
+        
+            <pre><code data-trim data-noescape>
+                ```
+                Hello
+                Bonjour
+                ```
+            </code></pre>
+        </section> 
+        <!-- slide 29 -->
+        <section>
+            <h3><a href="https://www.npmjs.com/ ">NPM</a></h3>
+            <ul>
+              <li>The package manager for JavaScript, currently the <i>largest</i> software registry in the world</li>
+              <li>Provides a way to distribute libraries or modules throughout the internet</li>
+              <li>Makes it easy to share your custom modules and access other modules in your projects</li>
+            </ul>
+        </section>   
+        <!-- slide 30-->
+				<section>
+          <h1>Bloc Resources & Next Steps</h1>
+          <ul>
+            <li><a href="https://bloc.github.io/group-sessions/content/decks/node-in-depth-1/">SLIDES<a></li>
+            <li><a href="https://www.bloc.io/checkpoints/2960?section_id=373">What is Node.js?<a></li>
+            <li><a href="https://www.bloc.io/checkpoints/2993?section_id=373">Working with Node modules<a></li>
+            <li><a href="https://www.bloc.io/checkpoints/2976?section_id=373">Basic Node app<a></li>
+            <li><a href="https://www.bloc.io/checkpoints/2959?section_id=373">Callbacks and Asynchronicity<a></li>
+            <li><a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback
+              Survey</a></li>
+          </ul>
+        </section>
+			</div>
+		</div>
+
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../../plugin/markdown/marked.js' },
+					{ src: '../../plugin/markdown/markdown.js' },
+					{ src: '../../plugin/notes/notes.js', async: true },
+					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
