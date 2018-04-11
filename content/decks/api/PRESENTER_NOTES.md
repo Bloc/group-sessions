@@ -41,9 +41,9 @@ Questions?
 - Stands for Application Programming Interface (API)
 - A software intermediary that allows two applications to talk to each other.
 - e.g. Facebook, Twitter or Uber APIs. 
-> Facebook Messenger integrates Google Maps API so you can share your location in a message.
-> Twitter API allows you to put a live feed of tweets in your blog.
-> Uber API allows your eCommerce clients to request a ride & get to your business faster. In fact, Uber, being serious about growth, gives you $5 for every new rider that signs up in your app.
+> **Facebook Messenger** integrates Google Maps API so you can share your location in a message.
+> **Twitter API** allows you to put a live feed of tweets in your blog.
+> **Uber API** allows your eCommerce clients to request a ride & get to your business faster. In fact, Uber, being serious about growth, gives you $5 for every new rider that signs up in your app.
 - An interface sits on top of complicated systems and simplifies certain tasks, a middleman that saves you from needing to know all details of what's happening under the hood.
 
 **What is an API video**
@@ -55,11 +55,11 @@ https://www.youtube.com/watch?v=s7wmiS2mSXY
 - API = interface that enables 2 applications to exchange data among each other. 
 - 75B internet connected devices by 2020.
 - 1 particularly key role APIs plays in future: connect to The Internet of Things.
-- Business data becomes valuable, Cambridge Analytica
+- Business data can be used for many purposes. Business data becomes valuable, Cambridge Analytica
 - Facilitates applications talking to one another.
-> insert API diagram that shows web interconnectedness.
+> Insert API diagram that shows web interconnectedness.
 
-> Data is one of the most valuable assets a business has. Companies are using data to provide more personalized, tailored experiences to their customers, analyzing customer and operational behavior to make better decisions, and providing web and mobile apps to their customers, employees, and partners.
+> **Data** is one of the most valuable assets a business has. Companies are using data to provide more personalized, tailored experiences to their customers, analyzing customer and operational behavior to make better decisions, and providing web and mobile apps to their customers, employees, and partners.
 
 ## API = the new currency
 
@@ -67,14 +67,15 @@ https://www.youtube.com/watch?v=s7wmiS2mSXY
 
 – S.Somasegar, VP of Microsoft’s developer division.
 
-> APIs make it easier to integrate and connect people, places, systems, data, and algorithms, create new user experiences, share data and information, authenticate people and things, enable transactions and algorithms, leverage third-party algorithms, and create new product/services and business models.
+> APIs make it easier to **integrate** and **connect people, places, systems, data, and algorithms, create new user experiences, share data and information, authenticate people and things, enable transactions and algorithms, leverage third-party algorithms, and create new product/services and business models**.
 
-Kristin R. Moyer, vice president and distinguished analyst at Gartner, said “The API economy is an enabler for turning a business or organization into a platform. Platforms multiply value creation because they enable business ecosystems inside and outside of the enterprise to consummate matches among users and facilitate the creation and/or exchange of goods, services and social currency so that all participants are able to capture value.”
+Kristin R. Moyer, vice president and distinguished analyst at Gartner, said “The API economy is an enabler for **turning a business or organization into a platform**. Platforms multiply value creation because they enable business ecosystems inside and outside of the enterprise to consummate matches among users and facilitate the creation and/or exchange of goods, services and social currency so that all participants are able to capture value.”
 
 ------------------------------------------
 ## II. Examples & Use Cases of popular APIs
 
 ## Uber API (just give overview)
+- allow your customers to get to your business faster.
 - request rides directly from the app
 - restaurant food delivery
 - google maps now uses Uber API
@@ -85,7 +86,7 @@ Developer Dashboard -> sign up.
 
 - API calls can be made to request info on available car types, driver location expressed in geo-coordinates, time estimates, estimated prices, user account history and activity.
 
-- Uber has always been serious about GROWTH, API affiliate program gives 3rd party app developers $5 for every new customer.
+- Uber has always been serious about **GROWTH**, API affiliate program gives **3rd party app developers $5** for every new customer.
 https://techcrunch.com/2015/12/02/uber-ride-request-button/ (Since 2015)
 
 EXAMPLES of Uber API
@@ -99,11 +100,11 @@ https://github.com/mjk/uber-rush/blob/master/examples/simple.js
 - USE CASES: send messages, create simple workflows, build bots, set up internal tools, many more.
 - Different APIs: Web API, Events API, Conversations API...
 - Slack loves working with developers and startups.
-For aspiring Entrepreneurs, a FUND to invest in your companies.
+For aspiring Entrepreneurs, a **FUND** to invest in your companies.
 https://slack.com/developers/fund 
 
 ------------------------------------------------
-III. How do (web) APIs work under the hood?
+III. How do APIs work under the hood?
 
 ## Web Client-Server diagram
 - Ask class: someone please take a stab at explaining this diagram.
