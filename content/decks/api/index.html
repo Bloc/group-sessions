@@ -20,14 +20,13 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
-    <script>/Users/hbn/Dropbox/group-sessions/content/decks/server-side-javascript-1/plugin/markdown/marked.js</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
         <!-- slide 1-->
         <section>
-          <h1>Node in Depth: the Basics</h1>
+          <h1>What is an API?</h1>
           <p><a href="https://www.bloc.io/mentors/henry-nguyen-3">Henry Nguyen</a></p>
         </section>
          <!-- slide 2-->
@@ -39,10 +38,10 @@
         <section>
           <h2>Overview</h2>
           <ol>
-            <li>Background: Client-Side vs Server-Side JavaScript</li>
-            <li>What is Node.js?</li>
-            <li>The Event Loop</li>
-            <li>Node modules</li>
+            <li>Definition: What is an API?</li>
+            <li>Examples & Use Cases of popular APIs</li>
+            <li>How does a (web) API work under the hood? </li>
+            <li>Step-by-step guide to use an API in your project</li>
           </ol>
         </section>
         <!-- slide 4-->
@@ -56,111 +55,105 @@
         <!-- slide 5-->
           <section>
               <h3>Links</h3>
-              <p><a href="https://bloc.github.io/group-sessions/content/decks/node-in-depth-1/">SLIDES<a></p>
+              <p><a href="https://bloc.github.io/group-sessions/content/decks/api/">SLIDES<a></p>
               <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback Survey</a></p>
             </section>
         <!-- slide 6-->
         <section>
-            <img src="./images/01-01-client-server-diagram.png"/>
+          <h3>What is an API?</h3>
+          <img src="./images/ipa.png"/>
         </section>
         <!-- slide 7-->
         <section>
-          <h3>Client-Side JavaScript</h3>
-          <ul>
-            <li>Also called "front-end code"</li>
-            <li>Code that runs on the client's machine</li>
-            <li>Makes requests to a server; processes, manipulates, and/or renders data that is received in response</li>
-          </ul>
+          <h3>Application Programming Interface</h3>
+          <p><i>A software intermediary that allows two applications to talk to each other.</i></p>
+          <img src="./images/facebook-api.png"/>
+          <img src="./images/uber-api.png"/>
+          <img src="./images/twitter-api.png"/>
         </section>    
         <!-- slide 8-->
         <section>
-            <img src="./images/client-server-javascript.png" height="70%" width="80%"/>
+          <h3>We live in an API economy</h3>
+          <ul>
+              <li>90% of world's data created past 2 years.</li>
+              <li>75 B internet connected devices by 2020</li>
+              <li>Business data becomes invaluable.</li>
+            </ul>
+            <img src="./images/API-platforms.png"/>
         </section>
+        <!-- slide 8-->
+        <section>
+            <p><i>”In the world of cloud computing, API’s are the NEW currency”</i></p>
+            <p>– S.Somasegar, VP of Microsoft’s developer division.</p>
+            <img src="./images/API-platforms.png"/>
+          </section>
         <!-- slide 9-->
         <section>
-            <ul>
-              <li><b>Client</b>: makes HTTP requests</li>
-              <li><b>Server</b>: responds to HTTP requests</li>
-              <li><b>Request</b>: formatted message sent over network by a client. Contains VERB, URI (route), headers and body.</li>
-              <li><b>Response</b>: a server's reply to a request (formatted message). Contains headers, payload and status.</li>
-              <li><b>Request-Response cycle</b>: the client initiates by sending request, and server completes it by sending exactly 1 response.</li>
-            </ul>
+            <h3>Examples and Use Cases of popular APIs</h3>
         </section>
         <!-- slide 10-->
 				<section>
-          <h3>What is Node.js?</h3>
-          <p><i>Entirely new environment</i> that runs JS.</p>
-          <p><a href="http://nodejs.org/"/>Node.js</a> is a powerful <i>server-side JavaScript platform</i> for building "fast, scalable network applications."</p>
-          <p>
-            <img src="./images/01-02-node-js.svg.png" height="70%" width="80%"/>
-          </p>
+          <h3><a href="https://developer.uber.com/">Uber API</a></h3>
+          <img src="./images/uber-API-2015.png"/>
         </section>
         <!-- slide 11-->
         <section>
-            <h3>The Chrome V8 engine</h3>
-            <ul>
-              <li><b><i>Node.js</i></b> uses the Google V8 JavaScript engine to execute code, and a large percentage of the basic modules are written in JavaScript."</li>
-              <li><b><i>V8</i></b> compiles JavaScript to native machine code before executing it, instead of more traditional techniques such as interpreting bytecode or compiling the whole program to machine code and executing it from a filesystem."</li>
-            </ul>
-              <img src="./images/google-chrome-v8-javascript-engine.png" height="70%" width="80%"/>
-            </p>
-          </section>
+            <h3><a href="https://developer.uber.com/">Sign Up as Developer</a></h3>
+            <h3><a href="https://uber-developers.news/">Follow Uber API platform community</a></h3>
+        </section>
          <!-- slide 12-->
-				<section>
-          <h3>Which companies use Node?</h3>
-          <p>From leading startups to Fortune 500 companies..</p>
-          <p>
-            <img src="./images/node-js-users.png" height="70%" width="80%"/>
-          </p>
+         <section>
+            <h3><a href="https://api.slack.com/">Slack API</a></h3>
+            <img src="./images/slack-api.png"/>
         </section>
         <!-- slide 13-->
         <section>
-            <p>But.. Why is Node.js so popular?</h3>
-            <p>Typical web apps:</p>
-            <p>
-              <img src="./images/server-side-prior.png" height="500" width="450"/>
-            </p>
+            <h3><a href="https://slack.com/developers/fund">Slack Fund</a></h3>
+            <img src="./images/slack-fund.png"/>
         </section>
         <!-- slide 14-->
         <section>
-            <p>Single-Page Applications <--> Chrome V8 engine <--> </p>
-            <p><i>Isomorphic JavaScript</i></p>
-            <p>
-              <img src="./images/isomorphic-javascript.png" height="500" width="500"/>
-            </p>
+            <h3>How do APIs work under the hood?</h3>
         </section>
         <!-- slide 15-->
         <section>
-            <p>Dichotomy of a fullstack web app built with Node.js</p>
+            <p>RESTful API</p>
             <p>
-              <img src="./images/01-03-MEAN-stack-1.png" height="400" width="800"/>
+              <img src="./images/rest-crud.png" height="400" width="800"/>
             </p>
         </section>
         <!-- slide 16-->
         <section>
-            <h3>But really... What is Node.js?</h3>
-            <p><i>"Node.js is an event-driven, asynchronous/ non-blocking I/O platform"</i></p>
+            <h3>REST</h3>
+            <p><i>"REST = Representational State Transfer: "architecture for networked applications", set of standards that describe how computers should communicate with each other and with applications across a network"</i></p>
         </section>
         <!-- slide 17-->
         <section>
-            <p>Come again?</p>
-            <p>
-              <img src="./images/confused.png" height="500" width="500"/>
-            </p>
+            <h3>REST</h3>
+            <ol>
+              <li>Follows HTTP protocol</li>
+              <li>Defines specific operations the application does to satisfy CRUD (create, read, update, delete) requirements.</li>
+            </ul>
         </section>
         <!-- slide 18-->
         <section>
-            <p>Let's break it down..</p>
-            <p><b>"Event-driven"</b>: Node callbacks are made possible by the <i>event loop</i>.</p>
-            <p>
-              <img src="./images/1-7-event-loop.jpg" height="400" width="700"/>
-            </p>
+            <p>APIs = endpoints to do a task when someone requests them</p>
+            <p>APIs consists of three parts</p>
+            <ul>
+                <li><b>User</b>: the person who makes a request</li>
+                <li><b>Request</b>: the computer that sends the request to the server</li>
+                <li><b>Response</b>: the computer that responds to the request</li>
+            </ul>
+            <img src="./images/01-01-client-server-diagram.png"/>
         </section>
         <!-- slide 19-->
         <section>
+            <p>Major actions with an </p>
             <ul>
-              <li><b>"Synchronous, or blocking"</b>: code runs in sequential order. Program waits for the line of code to finish executing before moving on to the next line of code.</li>
-              <li><b>"Asynchronous, or non-blocking"</b>: code does not wait for the current line to execute before moving on to run the next line.</li>
+                <li><b>GET</b>: to fetch data</li>
+                <li><b>POST</b>: to edit existing data</li>
+                <li><b>PUT</b>: to add new data</li>     
+                <li><b>DELETE</b>: to delete data</li>        
             </ul>
         </section>
         <!-- slide 20-->
