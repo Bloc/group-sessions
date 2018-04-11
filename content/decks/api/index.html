@@ -36,40 +36,40 @@
         </section>
         <!-- slide 3-->
         <section>
-          <h2>Overview</h2>
+          <h1>Overview</h1>
           <ol>
             <li>Definition: What is an API?</li>
-            <li>Examples & Use Cases of popular APIs</li>
-            <li>How does a (web) API work under the hood? </li>
-            <li>Step-by-step guide to use an API in your project</li>
+            <li>Popular APIs: Examples & Use Cases</li>
+            <li>How do APIs work under the hood? </li>
+            <li>Step-by-step guide to using an API in your project</li>
           </ol>
         </section>
         <!-- slide 4-->
         <section>
-          <h3>Expectations</h3>
+          <h2>Expectations</h2>
           <ul>
-            <li>You should have at least a basic understanding of JavaScript 👍</li>
-            <li>Please particpate by answering my questions 😺</li>
+            <li>A solid graps of JavaScript & understanding of how web applications work 👍</li>
+            <li>Please participate by answering my questions 😺</li>
           </ul>
         </section>
         <!-- slide 5-->
           <section>
-              <h3>Links</h3>
+              <h2>Links</h2>
               <p><a href="https://bloc.github.io/group-sessions/content/decks/api/">SLIDES<a></p>
               <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback Survey</a></p>
             </section>
         <!-- slide 6-->
         <section>
-          <h3>What is an API?</h3>
+          <h1>1. What is an API?</h1>
           <img src="./images/ipa.png"/>
         </section>
         <!-- slide 7-->
         <section>
-          <h3>Application Programming Interface</h3>
+          <h3>API = Application Programming Interface:</h3>
           <p><i>A software intermediary that allows two applications to talk to each other.</i></p>
-          <img src="./images/facebook-api.png"/>
-          <img src="./images/uber-api.png"/>
-          <img src="./images/twitter-api.png"/>
+          <img src="./images/facebook-api.png" height="200" width="250"/>
+          <img src="./images/twitter-api.png" height="200" width="350"/>
+          <img src="./images/uber-api.png" height="200" width="200"/>
         </section>    
         <!-- slide 8-->
         <section>
@@ -83,13 +83,13 @@
         </section>
         <!-- slide 8-->
         <section>
-            <p><i>”In the world of cloud computing, API’s are the NEW currency”</i></p>
-            <p>– S.Somasegar, VP of Microsoft’s developer division.</p>
-            <img src="./images/API-platforms.png"/>
-          </section>
-        <!-- slide 9-->
+          <p>– S. Somasegar, VP of Microsoft’s developer division:</p>
+          <p><i>"In the world of cloud computing, API’s are the NEW currency"</i></p>
+          <img src="./images/API-platforms.png"/>
+        </section>
+        <!-- slide 9 TRANSITION SLIDE-->
         <section>
-            <h3>Examples and Use Cases of popular APIs</h3>
+            <h1>2. Uber & Slack APIs: Examples & Use Cases</h1>
         </section>
         <!-- slide 10-->
 				<section>
@@ -98,8 +98,8 @@
         </section>
         <!-- slide 11-->
         <section>
-            <h3><a href="https://developer.uber.com/">Sign Up as Developer</a></h3>
-            <h3><a href="https://uber-developers.news/">Follow Uber API platform community</a></h3>
+            <p><a href="https://developer.uber.com/">Sign Up as Developer</a></p>
+            <p><a href="https://uber-developers.news/">Follow Uber API platform community</a></p>
         </section>
          <!-- slide 12-->
          <section>
@@ -111,44 +111,40 @@
             <h3><a href="https://slack.com/developers/fund">Slack Fund</a></h3>
             <img src="./images/slack-fund.png"/>
         </section>
-        <!-- slide 14-->
+        <!-- slide 14 TRANSITION SLIDE -->
         <section>
-            <h3>How do APIs work under the hood?</h3>
-        </section>
-        <!-- slide 15-->
+        <h1>3. How do APIs work under the hood?</h1>
+        <!-- slide 18-->
         <section>
-            <p>RESTful API</p>
-            <p>
-              <img src="./images/rest-crud.png" height="400" width="800"/>
-            </p>
-        </section>
-        <!-- slide 16-->
-        <section>
-            <h3>REST</h3>
-            <p><i>"REST = Representational State Transfer: "architecture for networked applications", set of standards that describe how computers should communicate with each other and with applications across a network"</i></p>
-        </section>
-        <!-- slide 17-->
-        <section>
-            <h3>REST</h3>
-            <ol>
-              <li>Follows HTTP protocol</li>
-              <li>Defines specific operations the application does to satisfy CRUD (create, read, update, delete) requirements.</li>
-            </ul>
+            <img src="./images/01-01-client-server-diagram.png"/>
         </section>
         <!-- slide 18-->
         <section>
             <p>APIs = endpoints to do a task when someone requests them</p>
-            <p>APIs consists of three parts</p>
+            <p>APIs consists of three parts:</p>
             <ul>
                 <li><b>User</b>: the person who makes a request</li>
                 <li><b>Request</b>: the computer that sends the request to the server</li>
                 <li><b>Response</b>: the computer that responds to the request</li>
             </ul>
-            <img src="./images/01-01-client-server-diagram.png"/>
+        </section>
+               
+        <!-- slide 16-->
+        <section>
+            <h2>REST = Representational State Transfer</h2>
+            <p><i>"Architecture for networked applications": A set of standards that describe how computers should communicate with each other and with applications across a network.</i></p>
+        </section>
+        <!-- slide 17-->
+        <section>
+            <h3>REST</h3>
+            <ol>
+              <li>Follows <b>HTTP protocol</b></li>
+              <li>Defines specific operations the application does to satisfy <b>CRUD (create, read, update, delete)</b> requirements.</li>
+            </ul>
         </section>
         <!-- slide 19-->
         <section>
-            <p>Major actions with an </p>
+            <h2>API actions:</h2>
             <ul>
                 <li><b>GET</b>: to fetch data</li>
                 <li><b>POST</b>: to edit existing data</li>
@@ -156,114 +152,69 @@
                 <li><b>DELETE</b>: to delete data</li>        
             </ul>
         </section>
+        <!-- slide 15-->
+        <section>
+            <h3>RESTful API</h3>
+            <p>
+              <img src="./images/rest-crud.png" height="400" width="800"/>
+            </p>
+        </section>
+        <!-- slide 20 TRANSITION SLIDE-->
+        <section>
+            <h1>4. STEP-BY-STEP GUIDE TO USING APIS</h1>
+        </section>
         <!-- slide 20-->
         <section>
-            <h2>The Event Loop</h2>
-            <p>
-              <img src="./images/event-loop-2.png" height="500" width="1000"/>
-            </p>
+          <h3>Step-by-step guide overview:</h3>
+          <ol>
+            <li>Sign up for a developer account</li>
+            <li>Determine which API to use</li>
+            <li>Read documentation & retrieve list of URLs</li>
+            <li>Get an API key if required & test APIs</li>
+            <li>Build your app</li>
+            <li>Reference example apps & open-source community when stuck</li>
+            <li>Share app with Bloc community & the world</li>
+          </ol>
         </section>
         <!-- slide 21-->
         <section>
-            <h2>What lies under the hood?</h2>
-            <p>
-              <img src="./images/nodejs-architecture.png" height="600" width="800"/>
-            </p>
+            <h3>1. Sign up for a developer account</h3>
+            <p><a href="https://api.slack.com/getting-started ">Slack<a></p>
+            <p><a href="https://beta.developer.spotify.com/ ">Spotify<a></p>
         </section>
         <!-- slide 22-->
         <section>
-          <h1>Questions?</h1>
+            <h3>2. Determine which API to use</h3>
+            <p><a href="https://api.slack.com/getting-started">Which Slack APIs should I use?<a></p>
+            <p><a href="https://medium.com/slack-developer-blog/getting-started-with-slacks-apis-f930c73fc889">Which API is right for your Slack app?<a></p>
+            <p>https://api.slack.com/web</p>
+            <p>https://api.slack.com/events-api</p>
+            <p>https://api.slack.com/docs/conversations-api</p>
         </section>
         <!-- slide 23-->
         <section>
-          <h3>Node modules</h3>
-          <p>A <a href="https://nodejs.org/docs/latest-v8.x/api/modules.html"/>module</a> is a set of functions or a block of code to include in your application. Node modules ~ "JavaScript libraries".</p>
+            <h3>3. Get an API key if required</h3>
+            <p><a href="https://api.slack.com/getting-started ">Slack<a></p>
+            <p><a href="https://beta.developer.spotify.com/ ">Spotify<a></p>
         </section>
         <!-- slide 24-->
         <section>
-          <h1>Node module demo</h1>
+            <h3>4. Read documentation & retrieve list of URLs</h3>
+            <p><a href="https://api.slack.com/getting-started ">Slack<a></p>
+            <p><a href="https://developer.spotify.com/web-api/endpoint-reference/ ">Spotify Web API: Endpoint Reference<a></p>
         </section>
         <!-- slide 25 -->
         <section>
-          <p>Before starting, we can set up a new directory and create the necessary files for this project.</p>
-          <h3>
-            Setting Up
-          </h3>
-          <pre><code data-trim data-noescape>
-              ```
-              $ mkdir node-greeting-app
-              $ cd node-greeting-app
-              $ touch greeting.js
-              $ touch main.js
-              ```
-          </code></pre>
-      </section> 
-        <!-- slide 26 -->
-        <section>
-            <h3>greeting.js</h3>
-            <p>We'll create a Node module in `greeting.js`. Add the following lines of code:</p>    
-            <pre><code data-trim contenteditable>
-                ```JavaScript(greeting.js)
-                module.exports = {
-                
-                  greetingEnglish: function() {
-                    console.log("Hello");
-                  },
-                
-                  greetingJapanese: function() {
-                    console.log("Konichiwa");
-                  }
-                };
-            </code></pre>
-            <p>The `module.exports` keyword makes properties and methods available outside the module file.</p>
-        </section>   
-        <!-- slide 27 -->
-        <section>
-            <h3>main.js</h3>
-            <p>The keyword `require` is used in Node to import modules. Now, `main.js` has access to the methods `greetingEnglish` and `greetingJapanese`.</p>
-        
-            <pre><code data-trim contenteditable>
-                ```JavaScript(main.js)
-                const greetings = require("./greeting.js");
-
-                // "Hello"
-                greetings.greetingEnglish();
-
-                // "Bonjour"
-                greetings.greetingFrench);
-                ```
-            </code></pre>
-        </section> 
-        <!-- slide 28 -->
-        <section>
-            <h3>Your first Node module</h3>
-            <p>To test our module, run `node main.js` in the terminal in the `node-greeting-app` directory. You should see the following output in your terminal.</p>
-        
-            <pre><code data-trim data-noescape>
-                ```
-                Hello
-                Bonjour
-                ```
-            </code></pre>
-        </section> 
-        <!-- slide 29 -->
-        <section>
-            <h3><a href="https://www.npmjs.com/ ">NPM</a></h3>
-            <ul>
-              <li>The package manager for JavaScript, currently the <i>largest</i> software registry in the world</li>
-              <li>Provides a way to distribute libraries or modules throughout the internet</li>
-              <li>Makes it easy to share your custom modules and access other modules in your projects</li>
-            </ul>
-        </section>   
+            <h3>Example apps built using Spotify</h3>
+            <p><a href="https://api.slack.com/tutorials/intro-to-message-buttons ">Slack message button<a></p>
+            <p><a href="https://beta.developer.spotify.com/ ">Spotify<a></p>
+        </section>  
         <!-- slide 30-->
 				<section>
           <h1>Bloc Resources & Next Steps</h1>
           <ul>
-            <li><a href="https://bloc.github.io/group-sessions/content/decks/node-in-depth-1/">SLIDES<a></li>
-            <li><a href="https://www.bloc.io/checkpoints/2960?section_id=373">What is Node.js?<a></li>
-            <li><a href="https://www.bloc.io/checkpoints/2993?section_id=373">Working with Node modules<a></li>
-            <li><a href="https://www.bloc.io/checkpoints/2976?section_id=373">Basic Node app<a></li>
-            <li><a href="https://www.bloc.io/checkpoints/2959?section_id=373">Callbacks and Asynchronicity<a></li>
+            <li><a href="https://bloc.github.io/group-sessions/content/decks/api/">SLIDES<a></li>
+            <li><a href="https://www.bloc.io/checkpoints/2888?section_id=368">Bloc checkpoint: Consuming APIs<a></li>
             <li><a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback
               Survey</a></li>
