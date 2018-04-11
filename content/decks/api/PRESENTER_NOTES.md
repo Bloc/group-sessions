@@ -20,9 +20,9 @@ So, what is an API? It sounds like a kind of beer... but what is it?
 I. Definition: What is an API?
 II. Examples & Use Cases of popular APIs 
 Uber and Slack API examples
-III. How does a (web) API work under the hood? Postman Tool.
-IV. Step-by-step guide to use an API in your project: Spotify and Twitter API
-> Twitter example API calls
+III. How does a (web) API work under the hood? Postman Tool. JSON View
+Google Maps, Open Weather
+IV. Step-by-step guide to use an API in your project: Spotify and Slack API
 > Spotify example API calls?
 (5. API demo: Spotify API React app)
 
@@ -46,6 +46,9 @@ Questions?
 > Uber API allows your eCommerce clients to request a ride & get to your business faster. In fact, Uber, being serious about growth, gives you $5 for every new rider that signs up in your app.
 - An interface sits on top of complicated systems and simplifies certain tasks, a middleman that saves you from needing to know all details of what's happening under the hood.
 
+**What is an API video**
+https://www.youtube.com/watch?v=s7wmiS2mSXY
+
 ## Importance of APIs. API economy
 - In today's world, everything is interconnected.
 - 90% of data has been created in the last 2 years.
@@ -55,6 +58,18 @@ Questions?
 - Business data becomes valuable, Cambridge Analytica
 - Facilitates applications talking to one another.
 > insert API diagram that shows web interconnectedness.
+
+> Data is one of the most valuable assets a business has. Companies are using data to provide more personalized, tailored experiences to their customers, analyzing customer and operational behavior to make better decisions, and providing web and mobile apps to their customers, employees, and partners.
+
+## API = the new currency
+
+”In the world of cloud computing, API’s are the new currency”
+
+– S.Somasegar, VP of Microsoft’s developer division.
+
+> APIs make it easier to integrate and connect people, places, systems, data, and algorithms, create new user experiences, share data and information, authenticate people and things, enable transactions and algorithms, leverage third-party algorithms, and create new product/services and business models.
+
+Kristin R. Moyer, vice president and distinguished analyst at Gartner, said “The API economy is an enabler for turning a business or organization into a platform. Platforms multiply value creation because they enable business ecosystems inside and outside of the enterprise to consummate matches among users and facilitate the creation and/or exchange of goods, services and social currency so that all participants are able to capture value.”
 
 ------------------------------------------
 ## II. Examples & Use Cases of popular APIs
@@ -70,7 +85,7 @@ Developer Dashboard -> sign up.
 
 - API calls can be made to request info on available car types, driver location expressed in geo-coordinates, time estimates, estimated prices, user account history and activity.
 
-- Uber has always been serious about growth, API affiliate program gives 3rd party app developers $5 for every new customer.
+- Uber has always been serious about GROWTH, API affiliate program gives 3rd party app developers $5 for every new customer.
 https://techcrunch.com/2015/12/02/uber-ride-request-button/ (Since 2015)
 
 EXAMPLES of Uber API
@@ -80,46 +95,52 @@ https://github.com/mjk/uber-rush/blob/master/examples/simple.js
 
 ## Slack API (just give overview)
 - POLL to engage class: who is not on Slack yet? You should be :)
+- https://api.slack.com/ (OPEN UP)
+- USE CASES: send messages, create simple workflows, build bots, set up internal tools, many more.
+- Different APIs: Web API, Events API, Conversations API...
 - Slack loves working with developers and startups.
-They even have a fund to invest in your companies.
+For aspiring Entrepreneurs, a FUND to invest in your companies.
 https://slack.com/developers/fund 
 
 ------------------------------------------------
 III. How do (web) APIs work under the hood?
 
+## Web Client-Server diagram
+- Ask class: someone please take a stab at explaining this diagram.
+
 ## What is a web API? RESTful diagram.
 - REST, or RESTful API
-- web API = RESTful API
+- To understand this you need to know that the HTTP protocol works on **request - response** method. When you visit/send a  request to a url you  send a request to the web server with certain **parameters**. The web server has defined a set of functions it needs to execute in this scenario. It does the required tasks and send some meaningful data as a **response** ( like json/xml in REST APIs).
 - Request <> Response: a web API URL sends back something ugly designed to be useful to a computer.
 https://schoolofdata.org/2013/11/18/web-apis-for-non-programmers/
-- SEND this request: https://api.twitter.com/1.1/statuses/home_timeline.json
+
+## Example: Google Maps API call
+- EXAMPLE: 
+
++ SEND this request: 
+http://maps.googleapis.com/maps/api/geocode/json?address=Boston 
+
 + Response: ugly-looking chunk of plain text with no decorations, in JSON format.
-++ Twitter API allows you a clean way to access the data you need w/o going in there and poke around (they won't let you anyway unless you work there).
 
-## Example: Twitter API call. 
-- https://dev.twitter.com/docs/api/1.1
-- Parameters. Request > Response.
-https://api.twitter.com/1.1/search/tweets.json 
-https://api.twitter.com/1.1/search/tweets.json?q=burritos 
+## Another example: Weather API
+- Weather in Mountain View (where Google is)
+http://samples.openweathermap.org/data/2.5/weather?zip=94040,us&appid=b6907d289e10d714a6e88b30761fae22
+
+## DEMO - Try it yourself - GAME: Locate your city.
+- http://maps.googleapis.com/maps/api/geocode/json?address={city}
+- http://maps.googleapis.com/maps/api/geocode/json?address=bali
 > DEMO: TRY IT right now, with your search term of choice.
-> ASK CLASS: So does it work? What format is your data returned in?
-- on webpage > download JSON view.
+> ASK CLASS: So does it work? What format is your data returned in? **5 minutes**
 
-## Format your results/ Response
-- English
-https://api.twitter.com/1.1/search/tweets.json?q=burritos&lang=en
-- Limit # of results returned:
-https://api.twitter.com/1.1/search/tweets.json?q=burritos&lang=en&count=100 
+> Google Maps and Open Weather APIs allow you a clean way to access the data you need w/o going in there and poke around (they won't let you anyway unless you work there).
+
+> Install JSON View Chrome extension
+> Download & Install Postman tool.
+
 
 ## Use Postman to test API calls.
 > Download Postman tool also.
 5 million developers use Postman.
-
-## Yelp
-http://api.yelp.com/v2/search?term=burritos&location=Chicago 
-
-## Foursquare
-https://api.foursquare.com/v2/venues/search?query=burritos&near=Chicago 
 
 ## Use cases
 1. Get information otherwise time-consuming to get.
@@ -140,14 +161,13 @@ https://api.slack.com/getting-started
 https://medium.com/slack-developer-blog/getting-started-with-slacks-apis-f930c73fc889 
 - https://api.slack.com/web 
 
-## Read documentation/ URLs
+## 3. Read documentation & Retrieve list of URLs
 > Get list of URLs you can use to retrieve data.
 > These URLs can call many things, like _resources_ and _methods_ 
 > Using them is called an _API request_ or _API call_.
 > For each URL, there will be a page or section > explaining more details about how to use it.
-> 
 
-## Look at example apps/ featured use cases on the API website
+## 4. Look at example apps/ featured use cases on the API website
 > Spotify API examples: many
 https://developer.spotify.com/web-api/code-examples/ 
 > Slack API examples: many
