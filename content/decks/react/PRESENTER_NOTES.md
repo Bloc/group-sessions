@@ -17,6 +17,7 @@ These notes attempt to distil the totality of the React library down to a collec
 * Form Input
 * How to Invoke a Parent Component Method from a Child Components JSX
 * Lift State Up
+* componentDidMount()
 * Extras
 
 
@@ -31,7 +32,7 @@ To get started you must bootstrap (set up) the application. The simplest way to 
 
 **HTML**
 
-<code> index.html </code>
+<code>index.html</code>
 
 ```
 <!DOCTYPE html>
@@ -598,14 +599,14 @@ class App extends React.Component {
 ```
 
 
-In the previous example a form element has an <code>onSubmit</code> event listener assigned a method named <code>newTodo</code> and it is invoked when the form is submitted. To capture the content of the input element you use an attribute specific to React named <code> ref </code>. In the code below the <code>ref</code> attribute is assigned curley braces and the code inside of the curley braces is a callback function. The <code> value </code> is an arbitrary variable name and the code will work irrespective of what you call it. The property <code>this.data</code> is used to capture the input data. 
+In the previous example a form element has an <code>onSubmit</code> event listener assigned a method named <code>newTodo</code> and it is invoked when the form is submitted. To capture the content of the input element you use an attribute specific to React named <code>ref</code>. In the code below the <code>ref</code> attribute is assigned curley braces and the code inside of the curley braces is a callback function. The <code>value</code> is an arbitrary variable name and the code will work irrespective of what you call it. The property <code>this.data</code> is used to capture the input data. 
 
 ```
  <input type="text" ref={(value)=> this.data = value}/>
 ```
 
 
-The content of the input field is stored on <code> this.data.value </code>.
+The content of the input field is stored on <code>this.data.value</code>.
 
 ```
 this.setState({
@@ -755,6 +756,61 @@ ReactDOM.render(
 
 ```
 
+
+# componentDidMount()
+
+You use ```componentDidMount()``` when you want to complete a task when the module loads such as retrieving data from third party web api's.
+
+
+```
+class App extends React.Component {
+ constructor(props){
+  super(props)
+
+  this.state = {
+    githubJSONData:undefined
+  }
+ }
+
+  componentDidMount(){
+    console.log("when component mounts this text logs");
+
+    // Can be used to fetch web API data as component loads.
+
+    /// EXAMPLE:
+
+    fetch("https://api.github.com/users/wktdev").then((response)=> {
+           return response.json()
+    }).then((data)=>{
+        this.setState({
+          githubJSONData:data
+        })
+
+        console.log(this.state.githubJSONData);
+
+    })
+    
+  }
+
+
+  render() {
+    return (
+      <div>
+       
+      </div>
+    );
+  }
+}
+
+
+
+
+ReactDOM.render(
+  <div><App/></div>,
+  document.getElementById("root")
+)
+
+```
 
 You can read more here: https://reactjs.org/docs/lifting-state-up.html
 
