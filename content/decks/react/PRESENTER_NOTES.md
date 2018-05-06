@@ -199,7 +199,7 @@ If you want to add classes to your HTML elements you don't use the class keyword
 
 # Props
 
-It is helpful to look at at each component class as a function that renders HTML when invoked.
+It is helpful to look at each component class as a function that renders HTML when invoked.
 Like non-React functions, components can be invoked with arguments. React calls component arguments *props*.
 
 The following code uses props to set the CSS background color value to blue.
@@ -250,7 +250,7 @@ class App extends React.Component{
 
 ```
 
-Any arguments (props) that you pass to components are stored on the props object. The props object is immutable and can not be changed. Attempting to change <code>this.props</code> results in an error.
+Any arguments (props) that you pass to components are stored on the props object. The props object is immutable and cannot be changed. Attempting to change <code>this.props</code> results in an error.
 
 
 
@@ -616,9 +616,9 @@ this.setState({
 ```
 
 
-# Triggering a parents method from a child component
+# Triggering a parent's method from a child component
 
-Sometimes you will want to trigger a parents method via an event listener set on a child component. To do this you must:
+Sometimes you will want to trigger a parent's method via an event listener set on a child component. To do this you must:
 
 1. Pass in the parent method as a prop to the child 
 2. Assign the prop to an event listener on the child. 
