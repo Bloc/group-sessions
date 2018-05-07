@@ -11,19 +11,19 @@ Every time you go to a popular website to order food, get groceries delivered, g
 
 Many of you want to **build your own app/ start your own business**. You will use popular APIs in your application. 
 
-- Previous workshop: What is an API? 
+Previous workshop: What is an API? 
 - Requests from folks to build their own app.
 - Next: how to build your own business?
 
 + Review: how APIs work
 + Steps to use APIs in your next project
-+ Example code: Examination of popular apps/ how they're built > full folder view: Spotify app (BlocJams)
++ Example code: Examination of popular apps/ how they're built > full folder structure view: Spotify app (BlocJams)
 
 ## 2. A bit about my background
 
 ## 3. Lecture overview:
 I. Review: what are APIs & how do APIs work?
-II. How to use an API to build your own app
+II. How to use APIs to build your own app
 III. Popular web apps built: Node, React, Uber, Slack, Spotify, Google Maps APIs
 
 ## 4. Expectations
@@ -80,9 +80,6 @@ https://uber-developers.news/ifttt-and-uber-open-up-a-new-category-of-automation
 ------------------------------------------
 ## II. Review: how do APIs work?
 
-BLOC CHECKPOINT: CONSUMING APIS
-https://www.bloc.io/checkpoints/2888?section_id=368 
-
 ## What is a web API? RESTful diagram.
 - REST, or RESTful API
 - To understand this you need to know that the HTTP protocol works on **request - response** method. When you visit/send a  request to a url you  send a request to the web server with certain **parameters**. The web server has defined a set of functions it needs to execute in this scenario. It does the required tasks and send some meaningful data as a **response** ( like json/xml in REST APIs).
@@ -99,20 +96,18 @@ http://maps.googleapis.com/maps/api/geocode/json?address=bali
 
 + Response: ugly-looking chunk of plain text with no decorations, in JSON format.
 
-## Another example: Weather API
-- Weather in Mountain View (where Google is)
-http://samples.openweathermap.org/data/2.5/weather?zip=94040,us&appid=b6907d289e10d714a6e88b30761fae22
-
-
-
-
-> Install JSON View Chrome extension
-> Download & Install Postman tool.
-
-
 ## Use Postman to test API calls.
 > Download Postman tool also.
 5 million developers use Postman.
+> Install JSON View Chrome extension
+
+## How to work with API's JSON data
+BLOC CHECKPOINT: CONSUMING APIS
+https://www.bloc.io/checkpoints/2888?section_id=368 
+
+1. Get the data back in desired format
+2. Promises
+3. Serve it up
 
 ## Use cases
 1. Get information otherwise time-consuming to get.
