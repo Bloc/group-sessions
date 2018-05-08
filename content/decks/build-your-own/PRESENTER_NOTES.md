@@ -86,14 +86,7 @@ https://uber-developers.news/ifttt-and-uber-open-up-a-new-category-of-automation
 - Request <> Response: a web API URL sends back something ugly designed to be useful to a computer.
 https://schoolofdata.org/2013/11/18/web-apis-for-non-programmers/
 
-## Example: Google Maps API call
-- EXAMPLE: 
-
-+ SEND this request: 
-http://maps.googleapis.com/maps/api/geocode/json?address={city}
-http://maps.googleapis.com/maps/api/geocode/json?address=Boston 
-http://maps.googleapis.com/maps/api/geocode/json?address=bali 
-
+## Example: CoinDesk API call
 + Response: ugly-looking chunk of plain text with no decorations, in JSON format.
 
 ## Use Postman to test API calls.
@@ -160,11 +153,14 @@ https://developer.spotify.com/web-api/code-examples/
 TUTORIAL
 - https://beta.developer.spotify.com/documentation/web-api/quick-start/
 
-## Get an API key if one is required
+## Get an API key (if required)
 - http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=Skyfall 
 - {"error":"Account Inactive"}
 You need an API key
 - http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=Skyfall&apikey=krw98sa2
+WHY
+- Monitor your application's API usage 
+- Might need paid accounts if exceed # API calls
 
 ## Side note: on rate limiting
 Many APIs include limits on how many requests you can make per hour or per day in order to prevent you from overloading their servers. If you aren’t a programmer, these limits probably won’t be an issue. They are there to prevent you from automating a flurry of thousands of requests. For information on rate limits, see a particular API’s documentation. Note also that lots of APIs are free up to a certain rate limit and then charge you money if you want to exceed it.
