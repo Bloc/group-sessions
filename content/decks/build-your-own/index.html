@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>What is an API?</title>
+		<title>Build your own app with popular APIs</title>
 
 		<link rel="stylesheet" href="../../css/reveal.css">
 		<link rel="stylesheet" href="../../css/theme/black.css">
@@ -26,7 +26,7 @@
 			<div class="slides">
         <!-- slide 1-->
         <section>
-          <h1>Building your own app with popular APIs</h1>
+          <h2>Building your own app with popular APIs</h2>
           <p><a href="https://www.bloc.io/mentors/henry-nguyen-3">Henry Nguyen</a></p>
           <img src="./images/API-platforms.png"/>
         </section>
@@ -39,9 +39,9 @@
         <section>
           <h1>Overview</h1>
           <ol>         
-            <li>Definition/ Review: What are APIs & how do APIs work?</li>
-            <li>How to use an API to build your own app</li>
-            <li>Popular web apps built: Node, React, Uber, Slack, Spotify, Google Maps APIs</li>
+            <li><b>What</b> are APIs & <b>How</b> do APIs work?</li>
+            <li><b>Guide</b> to use APIs in your own app</li>
+            <li><b>Popular apps</b> built with Node, React, Uber, Slack, Spotify, Google Maps APIs</li>
          </ol>
         </section>
         <!-- slide 4-->
@@ -55,7 +55,7 @@
         <!-- slide 5-->
           <section>
               <h2>Links</h2>
-              <p><a href="https://bloc.github.io/group-sessions/content/decks/api/">API Slides<a></p>
+              <p><a href="https://bloc.github.io/group-sessions/content/decks/build-your-own/">API Slides<a></p>
               <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback Survey</a></p>
             </section>
         <!-- slide 6-->
@@ -88,20 +88,25 @@
         </section>
         <!-- slide 10 TRANSITION SLIDE-->
         <section>
-            <h1>2. Popular APIs: Examples & Use Cases</h1>
+            <h3>Popular APIs</h3>
             <img src="./images/uber-api.png" height="250" width="250"/>
             <img src="./images/slack-logo.png" height="250" width="250"/>
         </section>
         <!-- slide 11-->
-				<section>
+			<section>
           <h3><a href="https://developer.uber.com/">Uber API</a></h3>
           <img src="./images/uber-API-2015.png"/>
         </section>
+        <!-- slide 11-->
+		<section>
+            <p>API platforms in an interconnected world</p>
+               <a href="https://uber-developers.news/ifttt-and-uber-open-up-a-new-category-of-automation-magic-ff8c9c2823e6"><img src="./images/uber-iffttt.png"/></a> 
+            </section>
         <!-- slide 12-->
         <section>
             <img src="./images/uber-api.png" height="250" width="250"/>
             <p><a href="https://developer.uber.com/">Sign Up as Developer</a></p>
-            <p><a href="https://uber-developers.news/">Follow Uber API community</a></p>
+            <p><a href="https://developer.uber.com/#products">Follow Uber API community</a></p>
         </section>
         <!-- slide 13-->
         <section>
@@ -115,7 +120,7 @@
         </section>
         <!-- slide 15 TRANSITION SLIDE -->
         <section>
-          <h2>3. RESTFUL APIS: How do they work?</h2>
+          <h2>2. RESTFUL APIS: How do they work?</h2>
           <img src="./images/restful-api.png" height="400" width="600"/>
         </section>
         <!-- slide 16-->
@@ -128,56 +133,47 @@
         </section>
         <!-- slide 18-->
         <section>
-            <p><b>APIs = <i>endpoints to do a task when someone requests them.</i></b></p>
-            <p>An API consists of 3 parts:</p>
+            <p><h3>API:</h3> endpoint to do a task when someone requests it.</p>
             <ul>
-                <li><b>User</b>: the person who makes a request</li>
-                <li><b>Request</b>: the computer that sends the request to the server</li>
-                <li><b>Response</b>: the computer that responds to the request</li>
+                <li><h3>Server:</h3> powerful computer that runs an API</li>
+                <li><h3>Client:</h3> program that exchanges data with a server through an API</li>
+                <li><h3>Request:</h3> computer that sends request to server</li>
+                <li><h3>Response:</h3> computer responds to request, returns response data.</li>
             </ul>
         </section>        
         <!-- slide 19-->
         <section>
-            <h3>Example: Google Maps API call</h3>
+            <h3>Example: <a href="https://www.coindesk.com/api/">CoinDesk API call</a></h3>
             <p>REQUEST:</p>
-            <p>http://maps.googleapis.com/maps/api/geocode/json?address=Boston</p>
+            <p><a href="https://api.coindesk.com/v1/bpi/currentprice.json">https://api.coindesk.com/v1/bpi/currentprice.json</a></p>
             <p>? RESPONSE ?</p>
-            <img src="./images/google-api.png" height="200" width="800"/>
-        </section>     
-        <!-- slide 20-->
-        <section>
-            <h3>Another example: Open Weather API call</h3>
-            <p>REQUEST:</p>
-            <p>http://samples.openweathermap.org/data/2.5/weather?zip=94040,us&appid=b6907d289e10d714a6e88b30761fae22</p>
-            <p>? RESPONSE ?</p>
-            <img src="./images/weather-api.png" height="200" width="400"/>
-        </section>   
+            <img src="./images/bitcoin.png" height="400" width="800"/>
+        </section>        
         <!-- slide 21-->
         <section>
-          <h3>Useful tools</h3>
+          <h3>Useful tools & links</h3>
           <p>Download: Postman tool & JSON View Chrome extension.</p>
-          <img src="./images/json-view.png" height="250" width="250"/>
-          <img src="./images/postman.png" height="250" width="250"/>
-        </section>
-        <!-- slide 21-->
-        <section>
-            <h3>Demo: Locate Your City</h3>
-            <p>REQUEST FORMAT:</p>
-            <p>http://maps.googleapis.com/maps/api/geocode/json?address={city}</p>
-            <p>Bali: http://maps.googleapis.com/maps/api/geocode/json?address=bali</p>
-            <p>? RESPONSE ?</p>
-        </section>      
-        <!-- slide 22-->
-        <section>
-            <h2>REST = Representational State Transfer</h2>
-            <p><i>"Architecture for networked applications": A set of standards that describe how computers should communicate with each other and with applications across a network.</i></p>
+          <p><a href="https://github.com/toddmotto/public-apis#cryptocurrency">Public APIs</a></p>
+          <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en"><img src="./images/json-view.png" height="250" width="250"/></a>
+          <a href="https://www.getpostman.com/apps"><img src="./images/postman.png" height="250" width="250"/></a>
         </section>
         <!-- slide 23-->
         <section>
-            <h3>What is RESTful API:</h3>
+            <h3>What is RESTful API?</h3>
             <ol>
+              <li><b>REST =</b> representational state transfer</li>
               <li>Follows <b>HTTP protocol</b></li>
               <li>Defines specific operations the application does to satisfy <b>CRUD (create, read, update, delete)</b> requirements.</li>
+            </ul>
+        </section>
+        <!-- slide 25-->
+        <section>
+            <h2>API actions:</h2>
+            <ul>
+                <li><b>GET</b>: to fetch data</li>
+                <li><b>POST</b>: to add new data</li>
+                <li><b>PUT</b>: to edit existing data</li>     
+                <li><b>DELETE</b>: to delete data</li>        
             </ul>
         </section>
         <!-- slide 24-->
@@ -189,28 +185,46 @@
         </section>
         <!-- slide 25-->
         <section>
-            <h2>API actions:</h2>
+            <h3>Working with API response data</h3>
+            <ol>
+                <li>You want some data from service X. Does service X have an API? (Hooray, it does, and it’s free!)
+                <li>Look at the API documentation. Figure out if there is a URL that retrieves the kind of data you’re looking for. There is? Great!</li>
+                <li>Sign up for an API key if one is required.</li>
+                <li>Figure out what parameters you need to include in the URL in order to get the exact data you want.</li>
+                <li>Load the URL, parameters included, into your browser/ Postman. Get back a response! If it didn’t work, go back to step 4.</li>
+                <li>Take that data and unpack it. For more on this, read XML and JSON.</li>
+            </ol>
+        </section>
+        <!-- slide 25-->
+        <section>
+            <h3>Working with API response data</h3>
             <ul>
-                <li><b>GET</b>: to fetch data</li>
-                <li><b>POST</b>: to edit existing data</li>
-                <li><b>PUT</b>: to add new data</li>     
-                <li><b>DELETE</b>: to delete data</li>        
+                <li><a href="https://www.bloc.io/checkpoints/2888?section_id=368">Bloc Consuming APIs checkpoint</a></li>      
+                <li><a href="https://restful.io/an-introduction-to-api-s-cee90581ca1b">HTTP request-response data</a></li>
+            </ul>
+        </section>
+        <!-- slide 25-->
+        <section>
+            <h3>API Authentication</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com/graphics/tryit.asp?filename=trymap_intro">API Key Authentication with Google Maps</a></li>
+                <li><a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Google Developers</a></li>      
+                <img src="./images/google-api.png" height="200" width="800"/>
             </ul>
         </section>
         <!-- slide 26 TRANSITION SLIDE-->
         <section>
-            <h1>4. STEP-BY-STEP GUIDE TO USING APIS</h1>
+            <h1>3. START BUILDING</h1>
             <img src="./images/spotify-api.png"/>
             <img src="./images/uber-api.png" height="125" width="125"/>
         </section>
         <!-- slide 27-->
         <section>
-          <h3>Step-by-step guide overview:</h3>
+          <h3>Step-by-step guide review:</h3>
           <ol>
             <li>Sign up for a developer account</li>
-            <li>Determine which API to use</li>
-            <li>Read documentation & retrieve list of URLs</li>
-            <li>Get an API key if required & test APIs</li>
+            <li>Get an API key (if required)</li>
+            <li>Read documentation for list of URLs -> test APIs</li>
             <li>Build your app</li>
             <li>Reference example apps & open-source community when stuck</li>
             <li>Share app with Bloc community & the world</li>
@@ -219,12 +233,26 @@
         <!-- slide 28-->
         <section>
             <h3>1. Sign up for a developer account</h3>
+            <li><a href="https://api.slack.com/getting-started ">Slack<a></li>
+            <li><a href="https://beta.developer.spotify.com/ ">Spotify<a></li> 
+        </section>
+        <!-- slide 30-->
+        <section>
+            <h3>2. Get an API key for authentication (if required)</h3>
+            <p>Why API key?</p>
+            <li><a href="https://api.slack.com/getting-started ">Slack<a></li>
+            <li><a href="https://beta.developer.spotify.com/dashboard/applications">Spotify Developer Dashboard<a></li>
+            <li><a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Google Maps API</a></li>
+        </section>
+        <!-- slide 31-->
+        <section>
+            <h3>3. Read documentation & retrieve list of URLs</h3>
             <p><a href="https://api.slack.com/getting-started ">Slack<a></p>
-            <p><a href="https://beta.developer.spotify.com/ ">Spotify<a></p>
+            <p><a href="https://developer.spotify.com/web-api/endpoint-reference/ ">Spotify Web API: Endpoint Reference<a></p>
         </section>
         <!-- slide 29-->
         <section>
-            <h3>2. Determine which API to use</h3>
+            <h3>Note: Determine which API to use</h3>
             <p><a href="https://api.slack.com/getting-started">Which Slack APIs should I use?<a></p>
             <p><a href="https://medium.com/slack-developer-blog/getting-started-with-slacks-apis-f930c73fc889">Which API is right for your Slack app?<a></p>
               <ol>
@@ -233,31 +261,33 @@
                 <li>https://api.slack.com/docs/conversations-api</li>
               </ol>
         </section>
-        <!-- slide 30-->
+        <!-- slide 29 TRANSITION:-->
         <section>
-            <h3>3. Get an API key if required</h3>
-            <p><a href="https://api.slack.com/getting-started ">Slack<a></p>
-            <p><a href="https://beta.developer.spotify.com/dashboard/applications">Spotify Developer Dashboard<a></p>
+            <h1>QUESTIONS?</h1>
         </section>
-        <!-- slide 31-->
+        <!-- slide 32  -->
         <section>
-            <h3>4. Read documentation & retrieve list of URLs</h3>
-            <p><a href="https://api.slack.com/getting-started ">Slack<a></p>
-            <p><a href="https://developer.spotify.com/web-api/endpoint-reference/ ">Spotify Web API: Endpoint Reference<a></p>
-        </section>
-        <!-- slide 32 -->
-        <section>
-            <h3>Example apps built</h3>
+            <h1>4. Example Apps</h1>
             <p><a href="https://slack.com/apps">Slack: App Showcase<a></p>
             <p><a href="https://developer.spotify.com/showcase/ ">Spotify: Developer Showcase<a></p>
+            <p><a href="http://michaelthelin.se/spotify-web-api-node/ ">Spotify Web API with Node<a></p>
+            <p><a href="https://medium.com/@jonnykalambay/now-playing-using-spotifys-awesome-api-with-react-7db8173a7b13">Spotify API with React<a></p>
+        </section>  
+        <section>
+            <h1>4. Example Apps</h1>
+            <p><a href="https://beta.developer.spotify.com/documentation/web-api/libraries/#example-apps">Spotify Code Snippets/ Example Apps<a></p>
+            <p><a href="https://github.com/spotify/web-api-auth-examples">Spotify Accounts Authentication Example<a></p>
+            <p><a href="http://michaelthelin.se/spotify-web-api-node/ ">Spotify Web API with Node<a></p>
+            <p><a href="https://medium.com/@jonnykalambay/now-playing-using-spotifys-awesome-api-with-react-7db8173a7b13">Spotify API with React<a></p>
         </section>  
         <!-- slide 33-->
 				<section>
           <h1>Bloc Resources & Next Steps</h1>
           <ul>
-            <li><a href="https://bloc.github.io/group-sessions/content/decks/api/">SLIDES<a></li>
+            <li><a href="https://bloc.github.io/group-sessions/content/decks/build-your-own/">SLIDES<a></li>
             <li><a href="https://www.bloc.io/checkpoints/2888?section_id=368">Bloc checkpoint: Consuming APIs<a></li>
             <li><a href="https://beta.developer.spotify.com/documentation/web-api/quick-start/">Spotify: Web API tutorial<a></li>
+            <li><a href="https://zapier.com/learn/apis/chapter-4-authentication-part-1/">API authentication<a></li>
             <li><a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback
               Survey</a></li>
