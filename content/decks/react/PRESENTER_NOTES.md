@@ -477,14 +477,11 @@ To assign a method that *takes arguments* to an event listener you need to wrap 
 
 ```
  sayHello(item){
-    
-     sayHello() {
 
          this.setState({
              items: [...this.state.items, {text:item}]
          })
-    }
-     
+    
   }
 
 ```
