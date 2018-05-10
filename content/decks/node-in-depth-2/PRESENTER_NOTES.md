@@ -147,6 +147,7 @@ function(req, res, next) {
 ## React + Node tutorial
 - https://codeburst.io/headache-free-ssr-react-js-node-js-and-es6-app-boilerplate-tutorial-267f7be0b7b5
 - https://medium.com/@phoebe.greig/headache-free-isomorphic-app-tutorial-react-js-react-router-node-js-ssr-with-state-and-es6-797a8d8e493a
+- http://yeoman.io/ 
 
 
 ## Alternative (after): start with boilerplate code

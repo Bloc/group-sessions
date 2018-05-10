@@ -113,7 +113,7 @@
         <section>
             <p><b>"Event-driven"</b>: Node callbacks are made possible by the <i>event loop</i>.</p>
             <p>
-              <img src="./images/event-loop-2.jpg" height="400" width="700"/>
+              <img src="./images/event-loop-2.png" height="400" width="700"/>
             </p>
         </section>
         <!-- slide 19-->
@@ -135,8 +135,8 @@
       </section>
       <!-- slide 26 -->
       <section>
-          <p>A promise</p>
-          <p>A promise represents the eventual result of an asynchronous operation. It is a placeholder into which the successful result value or reason for failure will materialize.</p>
+          <h3>Promises</h3>
+          <p><i>A promise represents the eventual result of an asynchronous operation. It is a placeholder into which the successful result value or reason for failure will materialize.</i></p>
       </section>
       <!-- slide 25 -->
       <section>
@@ -145,12 +145,7 @@
               var promise = readFile()
               promise.then(console.log, console.error)
           </code></pre>
-      </section>        
-      <!-- slide 26 -->
-      <section>
-          <p>A promise</p>
-          <p>A promise represents the eventual result of an asynchronous operation. It is a placeholder into which the successful result value or reason for failure will materialize.</p>
-      </section>     
+      </section>             
       <!-- slide 25 -->
       <section>
           <p>Chaining and nesting promises, elegantly.</p>
@@ -201,9 +196,11 @@
       </section>     
       <!-- slide 28 -->
       <section>
-          <p>Get good at promises</p>
-          <p>https://github.com/stevekane/promise-it-wont-hurt</p>     
-          <p>https://nodeschool.io/</p>     
+          <h3>Get good at promises</h3>
+          <ul>
+            <li><a href="https://github.com/stevekane/promise-it-wont-hurt">https://github.com/stevekane/promise-it-wont-hurt</a></li>
+            <li><a href="https://nodeschool.io/">https://nodeschool.io/</a></li>
+          </ul>     
       </section>     
       <!-- slide 15-->
       <section>
@@ -212,33 +209,49 @@
             <img src="./images/01-03-MEAN-stack-1.png" height="400" width="800"/>
           </p>
       </section>
-      <!-- slide 15-->
-      <section>
-          <p>Dichotomy of a fullstack web app built with Node.js</p>
-          <p>
-            <img src="./images/01-03-MEAN-stack-1.png" height="400" width="800"/>
-          </p>
-      </section>
       <!-- slide 10-->
       <section>
           <h3><a href="https://expressjs.com/"/>Express.js</a></h3>
           <ul>
             <li>"Fast, unopinionated, minimalist web framework for Node.js"</li>
+            <li><a href="https://expressjs.com/en/starter/installing.html">Install Express</a></li>
+            <li><a href="https://expressjs.com/en/4x/api.html">Documentation</a></li>
+          </ul>
+        </section>
+        <!-- slide 28 -->
+        <section>
+            <p>Express = A Node library for (HTTP) request handling</p>
+        </section>
+        <!-- slide 9-->
+        <section>
+            <ul>
+              <li><b>Client</b>: makes HTTP requests</li>
+              <li><b>Server</b>: responds to HTTP requests</li>
+              <li><b>Request - Response cycle</b>: the client initiates by sending request, and server completes it by sending exactly 1 response.</li>
+              <li><a href="https://restful.io/an-introduction-to-api-s-cee90581ca1b">API review/ refresher</a></li>
+            </ul>
+        </section>
+    
+      <!-- slide 10-->
+      <section>
+          <h3><a href="https://expressjs.com/"/>Express.js</a></h3>
+          <ul>
             <li>5x/ 10x less code.</li>
             <li>Organize web app into MVC on server-side.</li>
             <li>Then use a database like MongoDB or Mongoose (for modeling) to provide back-end for application</li>
             <li>Helps manage everything: routes, handling HTTP requests, views.</li>
           </ul>
         </section>
-      <!-- slide 10-->
-      <section>
-          <h3><a href="https://expressjs.com/"/>Express.js</a></h3>
-          <ul>
-            <li>"Fast, unopinionated, minimalist web framework for Node.js"</li>
-            <li>Install Express: https://expressjs.com/en/starter/installing.html</li>
-            <li>https://expressjs.com/en/4x/api.html</li>
-          </ul>
-        </section>  
+        <!-- slide 30 EXPRESS-->
+				<section>
+            <h3>Express.js</h3>
+            <ul>
+              <li>Treats requests as objects, created by event</li>
+              <li>matches on VERB and ROUTE</li>
+              <li>allows chaining of (many) handlers</li>
+              <li>enables modular layering with "routers"</li>
+            </ul>
+          </section>
         <!-- slide 28 -->
         <section>
             <p>A simple Express application/ server</p>
@@ -252,26 +265,20 @@
 
                 app.listen(3000);
             </code></pre>
-        </section>
+        </section>  
         <!-- slide 28 -->
         <section>
-            <p>A Node library for (HTTP) request handling</p>
-        </section>
-        <!-- slide 9-->
-        <section>
-            <ul>
-              <li><b>Client</b>: makes HTTP requests</li>
-              <li><b>Server</b>: responds to HTTP requests</li>
-              <li><b>Request - Response cycle</b>: the client initiates by sending request, and server completes it by sending exactly 1 response.</li>
-              <li>https://restful.io/an-introduction-to-api-s-cee90581ca1b</li>
-            </ul>
-        </section>
+            <p><a href="https://expressjs.com/en/starter/generator.html">Express application generator</a></p>  
+            <pre><code data-trim contenteditable>
+                $ npm install express-generator -g
+            </code></pre>
+        </section>  
       <!-- slide 28 -->
       <section>
           <p>Easy to follow Express tutorials</p>
           <ul>
-            <li>https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs</li>
-            <li>https://medium.freecodecamp.org/building-a-simple-node-js-api-in-under-30-minutes-a07ea9e390d2</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs">Mozilla Express tutorial</a></li>
+            <li><a href="https://medium.freecodecamp.org/building-a-simple-node-js-api-in-under-30-minutes-a07ea9e390d2">Build a simple Node API in < 30 minutes</a></li>
           </ul>
       </section>
       <!-- slide 28 -->
@@ -280,21 +287,51 @@
           <ul>
             <li>app.use vs. app.all</li>
             <li>req.params vs. req.query vs. req.body</li>
-            <li>Documentation: https://expressjs.com/en/4x/api.html</li>
-            <li>Googling & Stack Overflow :D</li>
+            <li>Express middleware: function (req, res, next) {...}</li>
+            <li><a href="https://expressjs.com/en/4x/api.html">Documentation</a></li>
+            <li>Googling + Stack Overflow</li>
+          </ul>
+      </section>  
+      <!-- slide 28 -->
+      <section>
+          <h1>START BUILDING</h1>
+      </section>
+      <!-- slide 28 -->
+      <section>
+          <p>Databases with Express.js</p>
+          <ul>
+            <li><a href="https://expressjs.com/en/guide/database-integration.html#mongodb">MongoDB<a></li>
+            <li><a href="https://expressjs.com/en/guide/database-integration.html#sqlite">SQLite<a></li>
+            <li><a href="http://mongoosejs.com/">Mongoose<a></li>
+            <li><a href="http://docs.sequelizejs.com/manual/tutorial/hooks.html">Sequelize<a></li>
+            <li><a href="https://expressjs.com/en/guide/database-integration.html">FULL LIST HERE<a></li>
           </ul>
       </section>
-        <!-- slide 30-->
+      <!-- slide 28 -->
+      <section>
+          <h3>BOILERPLATE CODE</h3>
+          <ul>
+            <li><a href="https://codeburst.io/headache-free-ssr-react-js-node-js-and-es6-app-boilerplate-tutorial-267f7be0b7b5">Headache free, Isomorphic, Boilerplate App Tutorial: React.js, node.js, SSR and ES6<a></li>
+            <li><a href="https://medium.com/@phoebe.greig/headache-free-isomorphic-app-tutorial-react-js-react-router-node-js-ssr-with-state-and-es6-797a8d8e493a">Isomorphic, SSR App Tutorial Made Simple: React.js, react-router, node.js with state<a></li>
+          </ul>
+      </section>
+      <!-- slide 28 -->
+      <section>
+          <p>Boilerplate code/ starter packs</p>
+          <ul>
+            <li><a href="http://yeoman.io/">Yeoman<a></li>
+            <li><a href="http://megaboilerplate.com/">Mega Boilerplate<a></li>
+            <li><a href="https://github.com/sahat/hackathon-starter">Hackathon Starter<a></li>
+          </ul>
+      </section>
+      <!-- slide 30-->
         <section>
           <h1>Bloc Resources & Next Steps</h1>
           <ul>
             <li><a href="https://bloc.github.io/group-sessions/content/decks/node-in-depth-1/">SLIDES<a></li>
-            <li><a href="https://www.bloc.io/checkpoints/2960?section_id=373">What is Node.js?<a></li>
-            <li><a href="https://www.bloc.io/checkpoints/2993?section_id=373">Working with Node modules<a></li>
-            <li><a href="https://www.bloc.io/checkpoints/2976?section_id=373">Basic Node app<a></li>
-            <li><a href="https://www.bloc.io/checkpoints/2959?section_id=373">Callbacks and Asynchronicity<a></li>
             <li><a href="https://developer.ibm.com/node/2016/08/24/promises-in-node-js-an-alternative-to-callbacks/">Promises in Node.js<a></li>
             <li><a href="https://stackoverflow.com/questions/12616153/what-is-express-js">What is Express.js?<a></li>
+            <li><a href="https://github.com/sahat/hackathon-starter">Hackathon Starter<a></li>
             <li><a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback
               Survey</a></li>
@@ -312,41 +349,9 @@
               <li>Async You</li>
             </ul>
           </section>
-        <!-- slide 30 EXPRESS-->
-				<section>
-          <h3>EXPRESS.JS</h3>
-          <p>A Node library for error handling</p>
-          <ul>
-            <li>Treats requests as objects, created by event</li>
-            <li>matches on VERB and ROUTE</li>
-            <li>allows chaining of (many) handlers</li>
-            <li>enables modular layering with "routers"</li>
-          </ul>
-        </section>
-        <!-- slide EXPRESS-->
-        <section>
-            <h3>Install Express.js</h3>
-            <p>npm install express (--save)</p>
-            <p>https://expressjs.com/en/starter/installing.html</p>
-        </section>
-        <!-- slide PROMISES-->
-        <section>
-            <h3>Promises</h3>
-            <p>npm install express (--save)</p>
-            <p>https://expressjs.com/en/starter/installing.html</p>
-        </section>
-        <!-- slide 30-->
-        <section>
-            <h3>Install Express.js</h3>
-            <p>npm install express (--save)</p>
-            <p>https://expressjs.com/en/starter/installing.html</p>
-        </section>
-        <!-- slide 30-->
-        <section>
-            <h3>Install Express.js</h3>
-            <p>npm install express (--save)</p>
-            <p>https://expressjs.com/en/starter/installing.html</p>
-        </section>
+ 
+        
+   
 			</div>
 		</div>
 
