@@ -260,8 +260,6 @@ EXAMPLES of Uber API
 https://github.com/mjk/uber-rush/blob/master/examples/simple.js
 
 
-------------------------------------------------
-
 
 
 ------------------------------------------------
