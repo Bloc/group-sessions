@@ -53,7 +53,6 @@ Isomorphic JavaScript: ability to use 1 single language from front- to back-end
 JavaScript-driven fullstack web app. Client + Server MVC
 
 ## 15. Dichotomy of a fullstack web app built on Node
-Explain details of this diagram.
 
 ## 16. "Node.js is an event-driven, asynchronous/ non-blocking I/O platform"
 
@@ -69,16 +68,22 @@ The reason why Node is able to process multiple things at once, even though it i
 
 ## 20. "Event-driven": Node callbacks are made possible by the event loop.
 
-## 21 Node architecture: What lies under the hood?
-- Node runs on processes and appears multi-threaded even though it is single-threaded. It is said to run asynchronous operations.
-- Node is built on Google V8 engine, which is written in C++.
+## Promises
+- https://github.com/stevekane/promise-it-wont-hurt
+- What is a promise?
+- WHY
 
-## 23. Node module
+## How do promises work?
 
-## 29. NPM (Node Package Manager)
+## A simple promise
+
+## Get good at promises & programming in Node
+- Additional resources
+- https://nodeschool.io/ 
+- https://github.com/workshopper/learnyounode 
 
 ------
-This lecture:
+## Next: Express, then some boilerplate code to get started!
 
 My goal is to empower you to, after this lecture, go out & start experimenting/ creating your own Node apps.
 
@@ -89,23 +94,6 @@ At Bloc: we empower you to learn. The jobs today will not be the jobs of tomorro
 - https://code.visualstudio.com/docs/nodejs/nodejs-tutorial 
 
 
-
-## Promises
-- https://github.com/stevekane/promise-it-wont-hurt
-- What is a promise?
-- WHY
-
-## How do promises work?
-
-## A simple promise
-
-## Get good at promises 
-- resources
-
-## Refresher workshops
-- https://nodeschool.io/ 
-- https://github.com/workshopper/learnyounode 
-
 ## Express
 - what is Express
 - why Express
@@ -113,8 +101,10 @@ At Bloc: we empower you to learn. The jobs today will not be the jobs of tomorro
 ## Install Express
 
 ## Getting started with Express
-- Maybe: https://github.com/azat-co/expressworks
+- Express workshop: https://github.com/azat-co/expressworks
 - MOZILLA TUTORIAL: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs
+- Build a Node.js API in < 30 mins.
+https://medium.freecodecamp.org/building-a-simple-node-js-api-in-under-30-minutes-a07ea9e390d2 
 
 ## Review: HTTP diagram
 
@@ -134,7 +124,6 @@ At Bloc: we empower you to learn. The jobs today will not be the jobs of tomorro
 function(req, res, next) {
     ...
 }
-
 
 ## A few simple demo
 

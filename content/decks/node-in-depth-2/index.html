@@ -39,10 +39,10 @@
         <section>
           <h2>Overview</h2>
           <ol>
-            <li>Review: Node ecosystem</li>
+            <li>Review: Node ecosystem, event loop</li>
             <li>Promises</li>
             <li>Express.js</li>
-            <li>Start building</li>
+            <li>How to start building with Node.js</li>
           </ol>
         </section>
         <!-- slide 4-->
@@ -66,44 +66,22 @@
         <!-- slide 6-->
         <section>
             <img src="./images/01-01-client-server-diagram.png"/>
-        </section>
-        <!-- slide 7-->
-            
+        </section>            
         <!-- slide 8-->
         <section>
             <img src="./images/client-server-javascript.png" height="70%" width="80%"/>
         </section>
-        <!-- slide 9-->
-        <section>
-            <ul>
-              <li><b>Client</b>: makes HTTP requests</li>
-              <li><b>Server</b>: responds to HTTP requests</li>
-              <li><b>Request</b>: formatted message sent over network by a client. Contains VERB, URI (route), headers and body.</li>
-              <li><b>Response</b>: a server's reply to a request (formatted message). Contains headers, payload and status.</li>
-              <li><b>Request-Response cycle</b>: the client initiates by sending request, and server completes it by sending exactly 1 response.</li>
-            </ul>
-        </section>
         <!-- slide 10-->
 				<section>
-          <h3>Node.js</h3>
+          <h3><a href="http://nodejs.org/"/>Node.js</a></h3>
           <ul>
-            <li>New JS platform to run fast, scalable network applications</li>
-            <li>Run on Chrome V8 engine</li>
-            <li>Run on Chrome V8 engine</li>
+            <li>Powerful server-side JavaScript platform/ runtime for building "fast, scalable network applications."</li>
+            <li>Runs on Chrome V8 engine</li>
           </ul>
           <p>
             <img src="./images/01-02-node-js.svg.png" height="70%" width="80%"/>
           </p>
         </section>
-        <!-- slide 11-->
-        <section>
-            <h3>The Chrome V8 engine</h3>
-            <ul>
-              
-            </ul>
-              <img src="./images/google-chrome-v8-javascript-engine.png" height="70%" width="80%"/>
-            </p>
-          </section>
          <!-- slide 12-->
 				<section>
           <h3>Which companies use Node?</h3>
@@ -111,14 +89,6 @@
           <p>
             <img src="./images/node-js-users.png" height="70%" width="80%"/>
           </p>
-        </section>
-        <!-- slide 13-->
-        <section>
-            <p>But.. Why is Node.js so popular?</h3>
-            <p>Typical web apps:</p>
-            <p>
-              <img src="./images/server-side-prior.png" height="500" width="450"/>
-            </p>
         </section>
         <!-- slide 14-->
         <section>
@@ -137,22 +107,13 @@
         </section>
         <!-- slide 16-->
         <section>
-            <h3>But really... What is Node.js?</h3>
             <p><i>"Node.js is an event-driven, asynchronous/ non-blocking I/O platform"</i></p>
-        </section>
-        <!-- slide 17-->
-        <section>
-            <p>Come again?</p>
-            <p>
-              <img src="./images/confused.png" height="500" width="500"/>
-            </p>
         </section>
         <!-- slide 18-->
         <section>
-            <p>Let's break it down..</p>
             <p><b>"Event-driven"</b>: Node callbacks are made possible by the <i>event loop</i>.</p>
             <p>
-              <img src="./images/1-7-event-loop.jpg" height="400" width="700"/>
+              <img src="./images/event-loop-2.jpg" height="400" width="700"/>
             </p>
         </section>
         <!-- slide 19-->
@@ -162,107 +123,169 @@
               <li><b>"Asynchronous, or non-blocking"</b>: code does not wait for the current line to execute before moving on to run the next line.</li>
             </ul>
         </section>
-        <!-- slide 20-->
+      <!-- slide 25 -->
         <section>
-            <h2>The Event Loop</h2>
-            <p>
-              <img src="./images/event-loop-2.png" height="500" width="1000"/>
-            </p>
-        </section>
-        <!-- slide 21-->
-        <section>
-            <h2>What lies under the hood?</h2>
-            <p>
-              <img src="./images/nodejs-architecture.png" height="600" width="800"/>
-            </p>
-        </section>
-        <!-- slide 22-->
-        <section>
-          <h1>Questions?</h1>
-        </section>
-        <!-- slide 23-->
-        <section>
-          <h3>Node modules</h3>
-          <p>A <a href="https://nodejs.org/docs/latest-v8.x/api/modules.html"/>module</a> is a set of functions or a block of code to include in your application. Node modules ~ "JavaScript libraries".</p>
-        </section>
-        <!-- slide 24-->
-        <section>
-          <h1>Node module demo</h1>
-        </section>
-        <!-- slide 25 -->
-        <section>
-          <p>Before starting, we can set up a new directory and create the necessary files for this project.</p>
-          <h3>
-            Setting Up
-          </h3>
-          <pre><code data-trim data-noescape>
-              ```
-              $ mkdir node-greeting-app
-              $ cd node-greeting-app
-              $ touch greeting.js
-              $ touch main.js
-              ```
+          <p>Callbacks</p>
+          <pre><code data-trim contenteditable>
+              readFile(function (err, data) {
+                if (err) return console.error(err)
+                console.log(data)
+              })
+          </code></pre>
+      </section>
+      <!-- slide 26 -->
+      <section>
+          <p>A promise</p>
+          <p>A promise represents the eventual result of an asynchronous operation. It is a placeholder into which the successful result value or reason for failure will materialize.</p>
+      </section>
+      <!-- slide 25 -->
+      <section>
+          <p>Callbacks to promises</p>
+          <pre><code data-trim contenteditable>
+              var promise = readFile()
+              promise.then(console.log, console.error)
+          </code></pre>
+      </section>        
+      <!-- slide 26 -->
+      <section>
+          <p>A promise</p>
+          <p>A promise represents the eventual result of an asynchronous operation. It is a placeholder into which the successful result value or reason for failure will materialize.</p>
+      </section>     
+      <!-- slide 25 -->
+      <section>
+          <p>Chaining and nesting promises, elegantly.</p>
+          <pre><code data-trim contenteditable>
+              var promise = readFile()
+                var promise2 = promise.then(readAnotherFile, console.error)
+
+                readFile()
+                  .then(readAnotherFile)
+                  .then(doSomethingElse)
+                  .then(...)
+          </code></pre>
+      </section>
+      <!-- slide 27 -->
+      <section>
+          <p>Promises can be nested as well if keeping a closure alive is important</p>
+          <pre><code data-trim contenteditable>
+              readFile()
+              .then(function (data) {
+                return readAnotherFile().then(function () {
+                  // do something with `data`
+                })
+              })
           </code></pre>
       </section> 
-        <!-- slide 26 -->
-        <section>
-            <h3>greeting.js</h3>
-            <p>We'll create a Node module in `greeting.js`. Add the following lines of code:</p>    
-            <pre><code data-trim contenteditable>
-                ```JavaScript(greeting.js)
-                module.exports = {
-                
-                  greetingEnglish: function() {
-                    console.log("Hello");
-                  },
-                
-                  greetingJapanese: function() {
-                    console.log("Konichiwa");
-                  }
-                };
-            </code></pre>
-            <p>The `module.exports` keyword makes properties and methods available outside the module file.</p>
-        </section>   
-        <!-- slide 27 -->
-        <section>
-            <h3>main.js</h3>
-            <p>The keyword `require` is used in Node to import modules. Now, `main.js` has access to the methods `greetingEnglish` and `greetingJapanese`.</p>
-        
-            <pre><code data-trim contenteditable>
-                ```JavaScript(main.js)
-                const greetings = require("./greeting.js");
-
-                // "Hello"
-                greetings.greetingEnglish();
-
-                // "Bonjour"
-                greetings.greetingFrench);
-                ```
-            </code></pre>
-        </section> 
+      <!-- slide 28 -->
+      <section>
+          <p>Error handling in promises</p>
+          <p>Synchronous code:</p>
+          <pre><code data-trim contenteditable>
+              try {
+                doThis()
+                doThat()
+              } catch (err) {
+                console.error(err)
+              }
+          </code></pre>
+      </section>
+      <!-- slide 28 -->
+      <section>
+          <p>Error handling in promises</p>
+          <p>Asynchronous code:</p>
+          <pre><code data-trim contenteditable>
+              doThisAsync()
+                .then(doThatAsync)
+                .then(undefined, console.error)
+          </code></pre>
+      </section>     
+      <!-- slide 28 -->
+      <section>
+          <p>Get good at promises</p>
+          <p>https://github.com/stevekane/promise-it-wont-hurt</p>     
+          <p>https://nodeschool.io/</p>     
+      </section>     
+      <!-- slide 15-->
+      <section>
+          <p>Dichotomy of a fullstack web app built with Node.js</p>
+          <p>
+            <img src="./images/01-03-MEAN-stack-1.png" height="400" width="800"/>
+          </p>
+      </section>
+      <!-- slide 15-->
+      <section>
+          <p>Dichotomy of a fullstack web app built with Node.js</p>
+          <p>
+            <img src="./images/01-03-MEAN-stack-1.png" height="400" width="800"/>
+          </p>
+      </section>
+      <!-- slide 10-->
+      <section>
+          <h3><a href="https://expressjs.com/"/>Express.js</a></h3>
+          <ul>
+            <li>"Fast, unopinionated, minimalist web framework for Node.js"</li>
+            <li>5x/ 10x less code.</li>
+            <li>Organize web app into MVC on server-side.</li>
+            <li>Then use a database like MongoDB or Mongoose (for modeling) to provide back-end for application</li>
+            <li>Helps manage everything: routes, handling HTTP requests, views.</li>
+          </ul>
+        </section>
+      <!-- slide 10-->
+      <section>
+          <h3><a href="https://expressjs.com/"/>Express.js</a></h3>
+          <ul>
+            <li>"Fast, unopinionated, minimalist web framework for Node.js"</li>
+            <li>Install Express: https://expressjs.com/en/starter/installing.html</li>
+            <li>https://expressjs.com/en/4x/api.html</li>
+          </ul>
+        </section>  
         <!-- slide 28 -->
         <section>
-            <h3>Your first Node module</h3>
-            <p>To test our module, run `node main.js` in the terminal in the `node-greeting-app` directory. You should see the following output in your terminal.</p>
-        
-            <pre><code data-trim data-noescape>
-                ```
-                Hello
-                Bonjour
-                ```
+            <p>A simple Express application/ server</p>
+            <pre><code data-trim contenteditable>
+                var express = require('express');
+                var app = express();
+
+                app.get('/', function(req, res){
+                  res.send('hello world');
+                });
+
+                app.listen(3000);
             </code></pre>
-        </section> 
-        <!-- slide 29 -->
+        </section>
+        <!-- slide 28 -->
         <section>
-            <h3><a href="https://www.npmjs.com/ ">NPM</a></h3>
+            <p>A Node library for (HTTP) request handling</p>
+        </section>
+        <!-- slide 9-->
+        <section>
             <ul>
-              <li>The package manager for JavaScript, currently the <i>largest</i> software registry in the world</li>
-              <li>Provides a way to distribute libraries or modules throughout the internet</li>
-              <li>Makes it easy to share your custom modules and access other modules in your projects</li>
+              <li><b>Client</b>: makes HTTP requests</li>
+              <li><b>Server</b>: responds to HTTP requests</li>
+              <li><b>Request - Response cycle</b>: the client initiates by sending request, and server completes it by sending exactly 1 response.</li>
+              <li>https://restful.io/an-introduction-to-api-s-cee90581ca1b</li>
             </ul>
-        </section>   
+        </section>
+      <!-- slide 28 -->
+      <section>
+          <p>Easy to follow Express tutorials</p>
+          <ul>
+            <li>https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs</li>
+            <li>https://medium.freecodecamp.org/building-a-simple-node-js-api-in-under-30-minutes-a07ea9e390d2</li>
+          </ul>
+      </section>
+      <!-- slide 28 -->
+      <section>
+          <p>Gotchas</p>
+          <ul>
+            <li>app.use vs. app.all</li>
+            <li>req.params vs. req.query vs. req.body</li>
+            <li>Documentation: https://expressjs.com/en/4x/api.html</li>
+            <li>Googling & Stack Overflow :D</li>
+          </ul>
+      </section>
         <!-- slide 30-->
-				<section>
+        <section>
           <h1>Bloc Resources & Next Steps</h1>
           <ul>
             <li><a href="https://bloc.github.io/group-sessions/content/decks/node-in-depth-1/">SLIDES<a></li>
@@ -270,6 +293,8 @@
             <li><a href="https://www.bloc.io/checkpoints/2993?section_id=373">Working with Node modules<a></li>
             <li><a href="https://www.bloc.io/checkpoints/2976?section_id=373">Basic Node app<a></li>
             <li><a href="https://www.bloc.io/checkpoints/2959?section_id=373">Callbacks and Asynchronicity<a></li>
+            <li><a href="https://developer.ibm.com/node/2016/08/24/promises-in-node-js-an-alternative-to-callbacks/">Promises in Node.js<a></li>
+            <li><a href="https://stackoverflow.com/questions/12616153/what-is-express-js">What is Express.js?<a></li>
             <li><a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeGNFA9YYgP2Awz_2RnGm1RjdEDx-CWul6nTT5BQ4f7lDI4Ug/viewform?entry.1364471353=YOUR+SESSION+NAME&entry.1404187043&entry.1060203151&entry.936748505&entry.90248072">Feedback
               Survey</a></li>
